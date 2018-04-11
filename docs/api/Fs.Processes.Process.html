@@ -1,0 +1,745 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Process
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Process
+   ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Fs.Processes.Process">
+  
+  
+  <h1 id="Fs_Processes_Process" data-uid="Fs.Processes.Process" class="text-break">Class Process
+  </h1>
+  <div class="markdown level0 summary"><p>A class that represents a Windows Process. Similar to <span class="xref">System.Diagnostics.Process</span>, but not
+intended as a complete replacement.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Process</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Fs.Processes.html">Fs.Processes</a></h6>
+  <h6><strong>Assembly</strong>: Fs.Processes.dll</h6>
+  <h5 id="Fs_Processes_Process_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Process : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process__ctor_Fs_Processes_CreateProcessInfo_.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.%23ctor(Fs.Processes.CreateProcessInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L62">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process__ctor_" data-uid="Fs.Processes.Process.#ctor*"></a>
+  <h4 id="Fs_Processes_Process__ctor_Fs_Processes_CreateProcessInfo_" data-uid="Fs.Processes.Process.#ctor(Fs.Processes.CreateProcessInfo)">Process(CreateProcessInfo)</h4>
+  <div class="markdown level1 summary"><p>Creates a new process and assigns the process to the job object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Process(CreateProcessInfo createProcessInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a></td>
+        <td><span class="parametername">createProcessInfo</span></td>
+        <td><p>The <a class="xref" href="Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a> that contains information this is
+used to start the process, including the file name and any command-line arguments.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process__ctor_Fs_Processes_CreateProcessInfo_Fs_Processes_ProcessOptions_.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.%23ctor(Fs.Processes.CreateProcessInfo%2CFs.Processes.ProcessOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L74">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process__ctor_" data-uid="Fs.Processes.Process.#ctor*"></a>
+  <h4 id="Fs_Processes_Process__ctor_Fs_Processes_CreateProcessInfo_Fs_Processes_ProcessOptions_" data-uid="Fs.Processes.Process.#ctor(Fs.Processes.CreateProcessInfo,Fs.Processes.ProcessOptions)">Process(CreateProcessInfo, ProcessOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new process and assigns the process to the job object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Process(CreateProcessInfo createProcessInfo, ProcessOptions processOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a></td>
+        <td><span class="parametername">createProcessInfo</span></td>
+        <td><p>The <a class="xref" href="Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a> that contains information this is
+used to start the process, including the file name and any command-line arguments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Fs.Processes.ProcessOptions.html">ProcessOptions</a></td>
+        <td><span class="parametername">processOptions</span></td>
+        <td><p>A set of <a class="xref" href="Fs.Processes.ProcessOptions.html">ProcessOptions</a> that controls how the new process
+is created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_ExitCode.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.ExitCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L889">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_ExitCode_" data-uid="Fs.Processes.Process.ExitCode*"></a>
+  <h4 id="Fs_Processes_Process_ExitCode" data-uid="Fs.Processes.Process.ExitCode">ExitCode</h4>
+  <div class="markdown level1 summary"><p>Gets the value associated with the process when it exited, or <code>null</code> if the process has not 
+exited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ExitCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_Exited.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.Exited%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L875">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_Exited_" data-uid="Fs.Processes.Process.Exited*"></a>
+  <h4 id="Fs_Processes_Process_Exited" data-uid="Fs.Processes.Process.Exited">Exited</h4>
+  <div class="markdown level1 summary"><p>Gets a <span class="xref">System.Threading.Tasks.Task</span> that completes when the process exits. The <span class="xref">System.Threading.Tasks.Task</span> is cancelled 
+if the <a class="xref" href="Fs.Processes.Process.html">Process</a> is disposed before the process exits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Exited { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_Handle.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L835">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_Handle_" data-uid="Fs.Processes.Process.Handle*"></a>
+  <h4 id="Fs_Processes_Process_Handle" data-uid="Fs.Processes.Process.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>Gets the <span class="xref">Microsoft.Win32.SafeHandles.SafeProcessHandle</span> associated with this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SafeProcessHandle Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Win32.SafeHandles.SafeProcessHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_Id.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L840">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_Id_" data-uid="Fs.Processes.Process.Id*"></a>
+  <h4 id="Fs_Processes_Process_Id" data-uid="Fs.Processes.Process.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Gets the unique identifier of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_StandardError.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.StandardError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L868">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_StandardError_" data-uid="Fs.Processes.Process.StandardError*"></a>
+  <h4 id="Fs_Processes_Process_StandardError" data-uid="Fs.Processes.Process.StandardError">StandardError</h4>
+  <div class="markdown level1 summary"><p>Gets a stream used to read from the redirected error output of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamReader StandardError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.StreamReader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_StandardInput.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.StandardInput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L845">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_StandardInput_" data-uid="Fs.Processes.Process.StandardInput*"></a>
+  <h4 id="Fs_Processes_Process_StandardInput" data-uid="Fs.Processes.Process.StandardInput">StandardInput</h4>
+  <div class="markdown level1 summary"><p>Gets a stream used to write to the redirected input of the proces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamWriter StandardInput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.StreamWriter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_StandardOutput.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.StandardOutput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L862">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_StandardOutput_" data-uid="Fs.Processes.Process.StandardOutput*"></a>
+  <h4 id="Fs_Processes_Process_StandardOutput" data-uid="Fs.Processes.Process.StandardOutput">StandardOutput</h4>
+  <div class="markdown level1 summary"><p>Gets a stream used to read from the redirected output of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamReader StandardOutput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.StreamReader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_BeginReadingStandardErrorAsync_System_Boolean_.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.BeginReadingStandardErrorAsync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L180">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_BeginReadingStandardErrorAsync_" data-uid="Fs.Processes.Process.BeginReadingStandardErrorAsync*"></a>
+  <h4 id="Fs_Processes_Process_BeginReadingStandardErrorAsync_System_Boolean_" data-uid="Fs.Processes.Process.BeginReadingStandardErrorAsync(System.Boolean)">BeginReadingStandardErrorAsync(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begins asynchronous read operations on the redirected <a class="xref" href="Fs.Processes.Process.html#Fs_Processes_Process_StandardError">StandardError</a> stream of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task BeginReadingStandardErrorAsync(bool readAsLines = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">readAsLines</span></td>
+        <td><p>When <code>true</code> data is buffered until a complete line is read, otherwise data is
+dispatched as it is received.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task</span> that completes when all data has been read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_BeginReadingStandardOutputAsync_System_Boolean_.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.BeginReadingStandardOutputAsync(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L153">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_BeginReadingStandardOutputAsync_" data-uid="Fs.Processes.Process.BeginReadingStandardOutputAsync*"></a>
+  <h4 id="Fs_Processes_Process_BeginReadingStandardOutputAsync_System_Boolean_" data-uid="Fs.Processes.Process.BeginReadingStandardOutputAsync(System.Boolean)">BeginReadingStandardOutputAsync(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begins asynchronous read operations on the redirected <a class="xref" href="Fs.Processes.Process.html#Fs_Processes_Process_StandardOutput">StandardOutput</a> stream of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task BeginReadingStandardOutputAsync(bool readAsLines = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">readAsLines</span></td>
+        <td><p>When <code>true</code> data is buffered until a complete line is read, otherwise data is
+dispatched as it is received.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A <span class="xref">System.Threading.Tasks.Task</span> that completes when all data has been read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_CancelReadingStandardError.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.CancelReadingStandardError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L194">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_CancelReadingStandardError_" data-uid="Fs.Processes.Process.CancelReadingStandardError*"></a>
+  <h4 id="Fs_Processes_Process_CancelReadingStandardError" data-uid="Fs.Processes.Process.CancelReadingStandardError">CancelReadingStandardError()</h4>
+  <div class="markdown level1 summary"><p>Cancels the asynchronous read operation on the redirected <a class="xref" href="Fs.Processes.Process.html#Fs_Processes_Process_StandardError">StandardError</a> stream of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelReadingStandardError()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_CancelReadingStandardOutput.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.CancelReadingStandardOutput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L167">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_CancelReadingStandardOutput_" data-uid="Fs.Processes.Process.CancelReadingStandardOutput*"></a>
+  <h4 id="Fs_Processes_Process_CancelReadingStandardOutput" data-uid="Fs.Processes.Process.CancelReadingStandardOutput">CancelReadingStandardOutput()</h4>
+  <div class="markdown level1 summary"><p>Cancels the asynchronous read operation on the redirected <a class="xref" href="Fs.Processes.Process.html#Fs_Processes_Process_StandardOutput">StandardOutput</a> stream of the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelReadingStandardOutput()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_Dispose.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L141">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_Dispose_" data-uid="Fs.Processes.Process.Dispose*"></a>
+  <h4 id="Fs_Processes_Process_Dispose" data-uid="Fs.Processes.Process.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_Kill_System_Int32_.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.Kill(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L240">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_Kill_" data-uid="Fs.Processes.Process.Kill*"></a>
+  <h4 id="Fs_Processes_Process_Kill_System_Int32_" data-uid="Fs.Processes.Process.Kill(System.Int32)">Kill(Int32)</h4>
+  <div class="markdown level1 summary"><p>Immediately stops the process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Kill(int exitCode = -1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">exitCode</span></td>
+        <td><p>The value to be used as the process&apos;s exit code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_Resume.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.Resume%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L224">View Source</a>
+  </span>
+  <a id="Fs_Processes_Process_Resume_" data-uid="Fs.Processes.Process.Resume*"></a>
+  <h4 id="Fs_Processes_Process_Resume" data-uid="Fs.Processes.Process.Resume">Resume()</h4>
+  <div class="markdown level1 summary"><p>Decrements the primary thread&apos;s suspend count. When the suspend count is decremented to zero, the
+execution of the thread is resumed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Resume()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if the thread is resumed; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_ErrorDataReceived.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.ErrorDataReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L830">View Source</a>
+  </span>
+  <h4 id="Fs_Processes_Process_ErrorDataReceived" data-uid="Fs.Processes.Process.ErrorDataReceived">ErrorDataReceived</h4>
+  <div class="markdown level1 summary"><p>Occurs each time a process writes data to its redirected <a class="xref" href="Fs.Processes.Process.html#Fs_Processes_Process_StandardError">StandardError</a> stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ProcessDataReceivedEventArgs&gt; ErrorDataReceived</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Fs.Processes.ProcessDataReceivedEventArgs.html">ProcessDataReceivedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process_OutputDataReceived.md&amp;value=---%0Auid%3A%20Fs.Processes.Process.OutputDataReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L825">View Source</a>
+  </span>
+  <h4 id="Fs_Processes_Process_OutputDataReceived" data-uid="Fs.Processes.Process.OutputDataReceived">OutputDataReceived</h4>
+  <div class="markdown level1 summary"><p>Occurs each time a process writes data to its redirected <a class="xref" href="Fs.Processes.Process.html#Fs_Processes_Process_StandardOutput">StandardOutput</a> stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ProcessDataReceivedEventArgs&gt; OutputDataReceived</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Fs.Processes.ProcessDataReceivedEventArgs.html">ProcessDataReceivedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_Process.md&amp;value=---%0Auid%3A%20Fs.Processes.Process%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/Process.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

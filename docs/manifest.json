@@ -1,0 +1,560 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/Source/Projects/Fs.Processes/Source/docfx-project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.ConsoleColors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.ConsoleColors.html",
+          "hash": "qkoMIE3nKMukP2iQ9rqNzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.CreateProcessInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.CreateProcessInfo.html",
+          "hash": "IdVv4M4vjD61ctNDW9YylQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.CpuCappable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.CpuCappable.html",
+          "hash": "7gsiwyeniCdrafrIyWBE8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.CpuLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.CpuLimit.html",
+          "hash": "hT0R8TEXzgeeNi8ElNCxpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.CpuMinMaxRateLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.CpuMinMaxRateLimit.html",
+          "hash": "E+Arz+UqbtdX3HhGVWCH7g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.CpuRateLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.CpuRateLimit.html",
+          "hash": "zMxAOI7K2lqD/N3y8qfswA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.CpuWeightedRateLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.CpuWeightedRateLimit.html",
+          "hash": "21N3Q7fyMw1+QjTAMFWaNw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.IoLimitEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.IoLimitEventArgs.html",
+          "hash": "XtQMLteIpGQn5vyfTNVLxQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.IoLimitType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.IoLimitType.html",
+          "hash": "ExkaLPnTaPb3Y5XwlkeiBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobAccounting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobAccounting.html",
+          "hash": "sXPZ+fR3ZgVtEh2eh59QaA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobLimits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobLimits.html",
+          "hash": "7NFdvF1LigDjBEb159/fiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobNotifications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobNotifications.html",
+          "hash": "wW9THplErWGl2qWy6AkqMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobObject.html",
+          "hash": "znR5RFRJejO2z+P9oq6d9A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobObjectInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobObjectInfo.html",
+          "hash": "IGxo4FkVLFSv4PvHBUuNzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobOptions.html",
+          "hash": "LRvf28clbrR5z9Vx0j3fHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.JobUiRestrictions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.JobUiRestrictions.html",
+          "hash": "vnA8xt1Gy2AjWiLdSVqMmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.MemoryLimitEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.MemoryLimitEventArgs.html",
+          "hash": "uP+zRtJPrJ+tUmH3Ce+NVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.ProcessExitedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.ProcessExitedEventArgs.html",
+          "hash": "bA5FidSD5gU7kIXpbASYJA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.ProcessIdEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.ProcessIdEventArgs.html",
+          "hash": "2zURkMcFPqxbg2g+3mDjZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.RateControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.RateControl.html",
+          "hash": "Cs+ect8w3l4OLSkz/vwzuw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.RateControlInterval.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.RateControlInterval.html",
+          "hash": "SZeCM9dzTaHBtmwOX9h0UQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.RateControlTolerance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.RateControlTolerance.html",
+          "hash": "ocoXneupqGd5MLs+EQ3O2A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.RateLimitEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.RateLimitEventArgs.html",
+          "hash": "eSQv84AESbEGLTt1ujh7DQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.TimeLimitEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.TimeLimitEventArgs.html",
+          "hash": "I5P1JEi/BgjdtNkSaX3ILA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.JobObjects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.JobObjects.html",
+          "hash": "mK44Q1pKnZv6rYTvH5Q5Kg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.Process.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.Process.html",
+          "hash": "mAnIxT6yuCfSlsA39j5bDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.ProcessArgumentEscaper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.ProcessArgumentEscaper.html",
+          "hash": "xrJ5nde7iW6XxvjGozadjg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.ProcessDataReceivedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.ProcessDataReceivedEventArgs.html",
+          "hash": "5an1dcOPaLhy6CaE2CcgBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.ProcessOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.ProcessOptions.html",
+          "hash": "OlMw8D2vUjaEwr3R7HQViA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.ProcessOptionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.ProcessOptionsExtensions.html",
+          "hash": "T+yjIEhXYc+JnjK+Amz0iQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.TitleIs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.TitleIs.html",
+          "hash": "fpppxU50V+ZQ9rC7L4NwJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.WindowShow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.WindowShow.html",
+          "hash": "K5w7Kz+AwvsxNEECGJEkJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fs.Processes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fs.Processes.html",
+          "hash": "HbcYeYv0hLOdYxaeprAsvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Win32.SafeHandles.SafeIoCompletionPortHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Win32.SafeHandles.SafeIoCompletionPortHandle.html",
+          "hash": "Ydm1grVQfVFYiz1HO5cUMQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Win32.SafeHandles.SafeJobObjectHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Win32.SafeHandles.SafeJobObjectHandle.html",
+          "hash": "mCGpAmk5ZlYry3xSLsHIpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Win32.SafeHandles.SafeThreadHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Win32.SafeHandles.SafeThreadHandle.html",
+          "hash": "7C2tNnnFuOD1hO/yCfxIwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Win32.SafeHandles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Win32.SafeHandles.html",
+          "hash": "TRi+IeNTxJ+1FF4x8w3MvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "5CfL90eYsOrw1QhzlMSWmw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "YZuao4OptT5NhA+5vYLX7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "xfdwRPiQY2jOgWrGbuRPPA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "mhWJK9sgK44josNfkvUeug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
