@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fs.Processes", "Fs.Processes\Fs.Processes.csproj", "{7DBBBA76-65E2-45AB-B43B-6AA9CBD05622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fs.Processes", "Source\Fs.Processes\Fs.Processes.csproj", "{7DBBBA76-65E2-45AB-B43B-6AA9CBD05622}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{3000984F-4080-411C-8856-53D57683F3D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DBBBA76-65E2-45AB-B43B-6AA9CBD05622} = {3000984F-4080-411C-8856-53D57683F3D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {98EE53AC-3A6B-4490-BE13-F0E37116E136}
