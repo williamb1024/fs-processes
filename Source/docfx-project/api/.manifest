@@ -100,6 +100,7 @@
   "Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess(System.Runtime.InteropServices.SafeHandle,System.Boolean)": "Fs.Processes.JobObjects.JobObject.yml",
   "Fs.Processes.JobObjects.JobObject.Handle": "Fs.Processes.JobObjects.JobObject.yml",
   "Fs.Processes.JobObjects.JobObject.Idle": "Fs.Processes.JobObjects.JobObject.yml",
+  "Fs.Processes.JobObjects.JobObject.Idled": "Fs.Processes.JobObjects.JobObject.yml",
   "Fs.Processes.JobObjects.JobObject.IoLimitExceeded": "Fs.Processes.JobObjects.JobObject.yml",
   "Fs.Processes.JobObjects.JobObject.Kill(System.Int32)": "Fs.Processes.JobObjects.JobObject.yml",
   "Fs.Processes.JobObjects.JobObject.MemoryLimitExceeded": "Fs.Processes.JobObjects.JobObject.yml",

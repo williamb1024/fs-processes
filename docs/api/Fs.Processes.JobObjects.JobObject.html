@@ -135,7 +135,7 @@
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject__ctor_System_Nullable_Fs_Processes_JobObjects_JobLimits__System_Nullable_Fs_Processes_JobObjects_JobNotifications__.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.%23ctor(System.Nullable%7BFs.Processes.JobObjects.JobLimits%7D%2CSystem.Nullable%7BFs.Processes.JobObjects.JobNotifications%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L25">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L28">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject__ctor_" data-uid="Fs.Processes.JobObjects.JobObject.#ctor*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject__ctor_System_Nullable_Fs_Processes_JobObjects_JobLimits__System_Nullable_Fs_Processes_JobObjects_JobNotifications__" data-uid="Fs.Processes.JobObjects.JobObject.#ctor(System.Nullable{Fs.Processes.JobObjects.JobLimits},System.Nullable{Fs.Processes.JobObjects.JobNotifications})">JobObject(Nullable&lt;JobLimits&gt;, Nullable&lt;JobNotifications&gt;)</h4>
@@ -177,7 +177,7 @@
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Current.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L426">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L544">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_Current_" data-uid="Fs.Processes.JobObjects.JobObject.Current*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_Current" data-uid="Fs.Processes.JobObjects.JobObject.Current">Current</h4>
@@ -209,7 +209,7 @@ process is not associated with a JobObject.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Handle.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L419">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L537">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_Handle_" data-uid="Fs.Processes.JobObjects.JobObject.Handle*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_Handle" data-uid="Fs.Processes.JobObjects.JobObject.Handle">Handle</h4>
@@ -237,10 +237,41 @@ process is not associated with a JobObject.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Idle.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Idle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L610">View Source</a>
+  </span>
+  <a id="Fs_Processes_JobObjects_JobObject_Idle_" data-uid="Fs.Processes.JobObjects.JobObject.Idle*"></a>
+  <h4 id="Fs_Processes_JobObjects_JobObject_Idle" data-uid="Fs.Processes.JobObjects.JobObject.Idle">Idle</h4>
+  <div class="markdown level1 summary"><p>Gets a task that completes when the number of active processes decreases to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Idle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_SupportsCpuRates.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.SupportsCpuRates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L482">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L600">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_SupportsCpuRates_" data-uid="Fs.Processes.JobObjects.JobObject.SupportsCpuRates*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_SupportsCpuRates" data-uid="Fs.Processes.JobObjects.JobObject.SupportsCpuRates">SupportsCpuRates</h4>
@@ -271,7 +302,7 @@ process is not associated with a JobObject.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_SupportsNotifications.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.SupportsNotifications%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L487">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L605">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_SupportsNotifications_" data-uid="Fs.Processes.JobObjects.JobObject.SupportsNotifications*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_SupportsNotifications" data-uid="Fs.Processes.JobObjects.JobObject.SupportsNotifications">SupportsNotifications</h4>
@@ -304,7 +335,7 @@ process is not associated with a JobObject.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_AssignProcess_Microsoft_Win32_SafeHandles_SafeProcessHandle_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.AssignProcess(Microsoft.Win32.SafeHandles.SafeProcessHandle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L148">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L160">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_AssignProcess_" data-uid="Fs.Processes.JobObjects.JobObject.AssignProcess*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_AssignProcess_Microsoft_Win32_SafeHandles_SafeProcessHandle_" data-uid="Fs.Processes.JobObjects.JobObject.AssignProcess(Microsoft.Win32.SafeHandles.SafeProcessHandle)">AssignProcess(SafeProcessHandle)</h4>
@@ -339,7 +370,7 @@ must have PROCESS_SET_QUOTA and PROCESS_TERMINATE access rights.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_AssignProcess_System_IntPtr_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.AssignProcess(System.IntPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L133">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L145">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_AssignProcess_" data-uid="Fs.Processes.JobObjects.JobObject.AssignProcess*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_AssignProcess_System_IntPtr_" data-uid="Fs.Processes.JobObjects.JobObject.AssignProcess(System.IntPtr)">AssignProcess(IntPtr)</h4>
@@ -374,7 +405,7 @@ must have PROCESS_SET_QUOTA and PROCESS_TERMINATE access rights.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_CreateProcess_Fs_Processes_CreateProcessInfo_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.CreateProcess(Fs.Processes.CreateProcessInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L78">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L90">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_CreateProcess_" data-uid="Fs.Processes.JobObjects.JobObject.CreateProcess*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_CreateProcess_Fs_Processes_CreateProcessInfo_" data-uid="Fs.Processes.JobObjects.JobObject.CreateProcess(Fs.Processes.CreateProcessInfo)">CreateProcess(CreateProcessInfo)</h4>
@@ -425,7 +456,7 @@ used to start the process, including the file name and any command-line argument
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_CreateProcess_Fs_Processes_CreateProcessInfo_Fs_Processes_ProcessOptions_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.CreateProcess(Fs.Processes.CreateProcessInfo%2CFs.Processes.ProcessOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L94">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L106">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_CreateProcess_" data-uid="Fs.Processes.JobObjects.JobObject.CreateProcess*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_CreateProcess_Fs_Processes_CreateProcessInfo_Fs_Processes_ProcessOptions_" data-uid="Fs.Processes.JobObjects.JobObject.CreateProcess(Fs.Processes.CreateProcessInfo,Fs.Processes.ProcessOptions)">CreateProcess(CreateProcessInfo, ProcessOptions)</h4>
@@ -483,7 +514,7 @@ is created.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Dispose.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L66">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L78">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_Dispose_" data-uid="Fs.Processes.JobObjects.JobObject.Dispose*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_Dispose" data-uid="Fs.Processes.JobObjects.JobObject.Dispose">Dispose()</h4>
@@ -499,7 +530,7 @@ is created.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_GrantUserHandleAccess_System_IntPtr_System_Boolean_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess(System.IntPtr%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L203">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L215">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_GrantUserHandleAccess_" data-uid="Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_GrantUserHandleAccess_System_IntPtr_System_Boolean_" data-uid="Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess(System.IntPtr,System.Boolean)">GrantUserHandleAccess(IntPtr, Boolean)</h4>
@@ -541,7 +572,7 @@ processes can no longer use the handle.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_GrantUserHandleAccess_System_Runtime_InteropServices_SafeHandle_System_Boolean_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess(System.Runtime.InteropServices.SafeHandle%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L186">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L198">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_GrantUserHandleAccess_" data-uid="Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_GrantUserHandleAccess_System_Runtime_InteropServices_SafeHandle_System_Boolean_" data-uid="Fs.Processes.JobObjects.JobObject.GrantUserHandleAccess(System.Runtime.InteropServices.SafeHandle,System.Boolean)">GrantUserHandleAccess(SafeHandle, Boolean)</h4>
@@ -583,7 +614,7 @@ processes can no longer use the handle.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Kill_System_Int32_.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Kill(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L215">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L227">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_Kill_" data-uid="Fs.Processes.JobObjects.JobObject.Kill*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_Kill_System_Int32_" data-uid="Fs.Processes.JobObjects.JobObject.Kill(System.Int32)">Kill(Int32)</h4>
@@ -618,7 +649,7 @@ associated with the job and all of its child jobs in the hierarchy.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_SetLimits_Fs_Processes_JobObjects_JobLimits__.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.SetLimits(Fs.Processes.JobObjects.JobLimits%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L226">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L238">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_SetLimits_" data-uid="Fs.Processes.JobObjects.JobObject.SetLimits*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_SetLimits_Fs_Processes_JobObjects_JobLimits__" data-uid="Fs.Processes.JobObjects.JobObject.SetLimits(Fs.Processes.JobObjects.JobLimits@)">SetLimits(JobLimits)</h4>
@@ -652,7 +683,7 @@ associated with the job and all of its child jobs in the hierarchy.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_SetNotifications_Fs_Processes_JobObjects_JobNotifications__.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.SetNotifications(Fs.Processes.JobObjects.JobNotifications%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L278">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L290">View Source</a>
   </span>
   <a id="Fs_Processes_JobObjects_JobObject_SetNotifications_" data-uid="Fs.Processes.JobObjects.JobObject.SetNotifications*"></a>
   <h4 id="Fs_Processes_JobObjects_JobObject_SetNotifications_Fs_Processes_JobObjects_JobNotifications__" data-uid="Fs.Processes.JobObjects.JobObject.SetNotifications(Fs.Processes.JobObjects.JobNotifications@)">SetNotifications(JobNotifications)</h4>
@@ -688,7 +719,7 @@ associated with the job and all of its child jobs in the hierarchy.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_CpuRateLimitExceeded.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.CpuRateLimitExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L472">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L590">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_CpuRateLimitExceeded" data-uid="Fs.Processes.JobObjects.JobObject.CpuRateLimitExceeded">CpuRateLimitExceeded</h4>
   <div class="markdown level1 summary"><p>Occurs when the CPU rate limit is exceeded.</p>
@@ -715,18 +746,18 @@ associated with the job and all of its child jobs in the hierarchy.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Idle.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Idle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_Idled.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.Idled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L477">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L595">View Source</a>
   </span>
-  <h4 id="Fs_Processes_JobObjects_JobObject_Idle" data-uid="Fs.Processes.JobObjects.JobObject.Idle">Idle</h4>
+  <h4 id="Fs_Processes_JobObjects_JobObject_Idled" data-uid="Fs.Processes.JobObjects.JobObject.Idled">Idled</h4>
   <div class="markdown level1 summary"><p>Occurs when all processes assigned to the job have exited.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Idle</code></pre>
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Idled</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -748,7 +779,7 @@ associated with the job and all of its child jobs in the hierarchy.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_IoLimitExceeded.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.IoLimitExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L462">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L580">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_IoLimitExceeded" data-uid="Fs.Processes.JobObjects.JobObject.IoLimitExceeded">IoLimitExceeded</h4>
   <div class="markdown level1 summary"><p>Occurs when an I/O limit is exceeded.</p>
@@ -778,7 +809,7 @@ associated with the job and all of its child jobs in the hierarchy.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_MemoryLimitExceeded.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.MemoryLimitExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L457">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L575">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_MemoryLimitExceeded" data-uid="Fs.Processes.JobObjects.JobObject.MemoryLimitExceeded">MemoryLimitExceeded</h4>
   <div class="markdown level1 summary"><p>Occurs when a process assigned to the job exceeds the per-process memory limit, or when the
@@ -809,7 +840,7 @@ the job&apos;s memory limit is exceeded.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_ProcessAdded.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.ProcessAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L440">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L558">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_ProcessAdded" data-uid="Fs.Processes.JobObjects.JobObject.ProcessAdded">ProcessAdded</h4>
   <div class="markdown level1 summary"><p>Occurs when a process is assigned to the job.</p>
@@ -839,7 +870,7 @@ the job&apos;s memory limit is exceeded.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_ProcessExited.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.ProcessExited%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L445">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L563">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_ProcessExited" data-uid="Fs.Processes.JobObjects.JobObject.ProcessExited">ProcessExited</h4>
   <div class="markdown level1 summary"><p>Occurs when a process assigned to the job terminates.</p>
@@ -869,7 +900,7 @@ the job&apos;s memory limit is exceeded.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_ProcessLimitExceeded.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.ProcessLimitExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L467">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L585">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_ProcessLimitExceeded" data-uid="Fs.Processes.JobObjects.JobObject.ProcessLimitExceeded">ProcessLimitExceeded</h4>
   <div class="markdown level1 summary"><p>Occurs when the active processes limit is exceeded.</p>
@@ -899,7 +930,7 @@ the job&apos;s memory limit is exceeded.</p>
     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject_TimeLimitExceeded.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject.TimeLimitExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L451">View Source</a>
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L569">View Source</a>
   </span>
   <h4 id="Fs_Processes_JobObjects_JobObject_TimeLimitExceeded" data-uid="Fs.Processes.JobObjects.JobObject.TimeLimitExceeded">TimeLimitExceeded</h4>
   <div class="markdown level1 summary"><p>Occurs when a process assigned to the job exceeds the per-process time limit, or when
@@ -940,7 +971,7 @@ the job&apos;s time limit is exceeded.</p>
                     <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=Fs_Processes_JobObjects_JobObject.md&amp;value=---%0Auid%3A%20Fs.Processes.JobObjects.JobObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/JobObjects/JobObject.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

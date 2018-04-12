@@ -1160,9 +1160,22 @@ references:
 - uid: Fs.Processes.JobObjects.JobObject.Idle
   name: Idle
   href: api/Fs.Processes.JobObjects.JobObject.html#Fs_Processes_JobObjects_JobObject_Idle
-  commentId: E:Fs.Processes.JobObjects.JobObject.Idle
+  commentId: P:Fs.Processes.JobObjects.JobObject.Idle
   fullName: Fs.Processes.JobObjects.JobObject.Idle
   nameWithType: JobObject.Idle
+- uid: Fs.Processes.JobObjects.JobObject.Idle*
+  name: Idle
+  href: api/Fs.Processes.JobObjects.JobObject.html#Fs_Processes_JobObjects_JobObject_Idle_
+  commentId: Overload:Fs.Processes.JobObjects.JobObject.Idle
+  isSpec: "True"
+  fullName: Fs.Processes.JobObjects.JobObject.Idle
+  nameWithType: JobObject.Idle
+- uid: Fs.Processes.JobObjects.JobObject.Idled
+  name: Idled
+  href: api/Fs.Processes.JobObjects.JobObject.html#Fs_Processes_JobObjects_JobObject_Idled
+  commentId: E:Fs.Processes.JobObjects.JobObject.Idled
+  fullName: Fs.Processes.JobObjects.JobObject.Idled
+  nameWithType: JobObject.Idled
 - uid: Fs.Processes.JobObjects.JobObject.IoLimitExceeded
   name: IoLimitExceeded
   href: api/Fs.Processes.JobObjects.JobObject.html#Fs_Processes_JobObjects_JobObject_IoLimitExceeded
