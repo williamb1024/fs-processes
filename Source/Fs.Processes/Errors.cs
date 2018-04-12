@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -17,8 +18,23 @@ namespace Fs.Processes
         {
             switch (errorCode)
             {
+                case Interop.Errors.ERROR_FILE_NOT_FOUND:
+                    return new FileNotFoundException();
+
+                case Interop.Errors.ERROR_PATH_NOT_FOUND:
+                    return new DirectoryNotFoundException();
+
                 case Interop.Errors.ERROR_ACCESS_DENIED:
                     return new UnauthorizedAccessException();
+
+                case Interop.Errors.ERROR_FILENAME_EXCED_RANGE:
+                    return new PathTooLongException();
+
+                case Interop.Errors.ERROR_INVALID_DRIVE:
+                    return new DriveNotFoundException();
+
+                case Interop.Errors.ERROR_OPERATION_ABORTED:
+                    return new OperationCanceledException();
 
                 default:
                     return new Win32Exception(errorCode);

@@ -102,11 +102,11 @@ namespace Fs.Processes
                 {
                     if (disposing)
                     {
-                        if ((!_processHandle.IsClosed) && (!_processHandle.IsInvalid))
+                        if ((_processHandle != null) && (!_processHandle.IsClosed) && (!_processHandle.IsInvalid))
                             CompleteProcessExitedTask(true);
 
-                        _processHandle.Dispose();
-                        _threadHandle.Dispose();
+                        _processHandle?.Dispose();
+                        _threadHandle?.Dispose();
 
                         try
                         {

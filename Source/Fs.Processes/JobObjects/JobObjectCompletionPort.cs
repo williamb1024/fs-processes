@@ -23,7 +23,10 @@ namespace Fs.Processes.JobObjects
         {
             IoCompletionPort completionPort = Interlocked.Exchange(ref _ioCompletionPort, null);
             if (completionPort != null)
-                ReleaseIoCompletionPort();
+            {
+                lock (_completionPortLock)
+                    ReleaseIoCompletionPort();
+            }
         }
 
         public void Dispose ()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.Win32.SafeHandles;
 
 namespace Fs.Processes.JobObjects
@@ -14,8 +15,10 @@ namespace Fs.Processes.JobObjects
     {
         private static readonly JobObjectInfo _currentJob = new CurrentJobObject();
 
+        private readonly object _idleTaskLock = new object();
         private readonly SafeJobObjectHandle _handle;
         private readonly JobObjectCompletionPort _completionPort;
+        private TaskCompletionSource<int> _idleTaskCompletionSource;
 
         /// <summary>
         /// Creates a new <see cref="JobObject"/> instance.
@@ -56,7 +59,16 @@ namespace Fs.Processes.JobObjects
             if ((_handle != null) && (!_handle.IsClosed) && (!_handle.IsInvalid) && (_completionPort != null))
                 _completionPort.SetCompletionAction(_handle.DangerousGetHandle(), null);
 
-            _handle?.Dispose();
+            // hold the _idleTaskLock while cancelling the idle task AND disposing the JobObject handle, we need
+            // to ensure that if another thread is calling into GetIdleTask that it sees this instance has having
+            // been disposed..
+
+            lock (_idleTaskLock)
+            {
+                _handle?.Dispose();
+                CompleteIdleTask(true);
+            }
+
             _completionPort?.Dispose();
         }
 
@@ -339,7 +351,15 @@ namespace Fs.Processes.JobObjects
                     ThreadPool.UnsafeQueueUserWorkItem(( state ) => OnLimitViolationNotification(violationInfo), null);
                 }
                 else
-                    ThreadPool.UnsafeQueueUserWorkItem(( state ) => OnGeneralNotification(notifyMessage, notifyData), null);
+                {
+                    // if the number of active processes dropped to zero, complete the Idle task..
+                    if (notifyMessage == Interop.Kernel32.JobObjectMessage.ActiveProcessZero)
+                        CompleteIdleTask(true);
+
+                    // queue the notification to the thread pool..
+                    if (HasEventHandler(notifyMessage))
+                        ThreadPool.UnsafeQueueUserWorkItem(( state ) => OnGeneralNotification(notifyMessage, notifyData), null);
+                }
             }
             finally
             {
@@ -347,64 +367,162 @@ namespace Fs.Processes.JobObjects
             }
         }
 
-        private void OnGeneralNotification ( Interop.Kernel32.JobObjectMessage notifyMessage, IntPtr notifyData )
+        private bool HasEventHandler ( Interop.Kernel32.JobObjectMessage notifyMessage )
         {
             switch (notifyMessage)
             {
                 case Interop.Kernel32.JobObjectMessage.NewProcess:
-                    ProcessAdded?.Invoke(this, new ProcessIdEventArgs((int)notifyData));
-                    break;
+                    return ProcessAdded != null;
 
                 case Interop.Kernel32.JobObjectMessage.AbnormalExitProcess:
                 case Interop.Kernel32.JobObjectMessage.ExitProcess:
-                    ProcessExited?.Invoke(this, new ProcessExitedEventArgs((int)notifyData, notifyMessage == Interop.Kernel32.JobObjectMessage.AbnormalExitProcess));
-                    break;
+                    return ProcessExited != null;
 
                 case Interop.Kernel32.JobObjectMessage.ActiveProcessLimit:
-                    ProcessLimitExceeded?.Invoke(this, EventArgs.Empty);
-                    break;
+                    return ProcessLimitExceeded != null;
 
                 case Interop.Kernel32.JobObjectMessage.ActiveProcessZero:
-                    Idle?.Invoke(this, EventArgs.Empty);
-                    break;
+                    return Idled != null;
 
                 case Interop.Kernel32.JobObjectMessage.EndOfProcessTime:
-                    TimeLimitExceeded?.Invoke(this, new TimeLimitEventArgs((int)notifyData));
-                    break;
-
                 case Interop.Kernel32.JobObjectMessage.EndOfJobTime:
-                    TimeLimitExceeded?.Invoke(this, new TimeLimitEventArgs(null));
-                    break;
+                    return TimeLimitExceeded != null;
 
                 case Interop.Kernel32.JobObjectMessage.ProcessMemoryLimit:
-                    MemoryLimitExceeded?.Invoke(this, new MemoryLimitEventArgs((int)notifyData, null));
-                    break;
-
                 case Interop.Kernel32.JobObjectMessage.JobMemoryLimit:
-                    MemoryLimitExceeded?.Invoke(this, new MemoryLimitEventArgs(null, null));
-                    break;
+                    return MemoryLimitExceeded != null;
+
+                default:
+                    return true;
+            }
+        }
+
+        private void OnGeneralNotification ( Interop.Kernel32.JobObjectMessage notifyMessage, IntPtr notifyData )
+        {
+            if (!IsDisposed)
+            {
+                switch (notifyMessage)
+                {
+                    case Interop.Kernel32.JobObjectMessage.NewProcess:
+                        ProcessAdded?.Invoke(this, new ProcessIdEventArgs((int)notifyData));
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.AbnormalExitProcess:
+                    case Interop.Kernel32.JobObjectMessage.ExitProcess:
+                        ProcessExited?.Invoke(this, new ProcessExitedEventArgs((int)notifyData, notifyMessage == Interop.Kernel32.JobObjectMessage.AbnormalExitProcess));
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.ActiveProcessLimit:
+                        ProcessLimitExceeded?.Invoke(this, EventArgs.Empty);
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.ActiveProcessZero:
+                        Idled?.Invoke(this, EventArgs.Empty);
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.EndOfProcessTime:
+                        TimeLimitExceeded?.Invoke(this, new TimeLimitEventArgs((int)notifyData));
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.EndOfJobTime:
+                        TimeLimitExceeded?.Invoke(this, new TimeLimitEventArgs(null));
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.ProcessMemoryLimit:
+                        MemoryLimitExceeded?.Invoke(this, new MemoryLimitEventArgs((int)notifyData, null));
+                        break;
+
+                    case Interop.Kernel32.JobObjectMessage.JobMemoryLimit:
+                        MemoryLimitExceeded?.Invoke(this, new MemoryLimitEventArgs(null, null));
+                        break;
+                }
             }
         }
 
         private void OnLimitViolationNotification ( in Interop.Kernel32.JOBOBJECT_LIMIT_VIOLATION_INFORMATION violationInfo )
         {
-            // NOTE: the violationInfo contains the violated limits along with the limits that were active
-            //       at the time the information was requested (which may differ from when the violation occurred). 
+            if (!IsDisposed)
+            {
+                // NOTE: the violationInfo contains the violated limits along with the limits that were active
+                //       at the time the information was requested (which may differ from when the violation occurred). 
 
-            if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectNotificationLimits.JobReadBytes) != 0)
-                IoLimitExceeded?.Invoke(this, new IoLimitEventArgs(IoLimitType.Read, violationInfo.IoReadBytes));
+                if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectNotificationLimits.JobReadBytes) != 0)
+                    IoLimitExceeded?.Invoke(this, new IoLimitEventArgs(IoLimitType.Read, violationInfo.IoReadBytes));
 
-            if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectNotificationLimits.JobWriteBytes) != 0)
-                IoLimitExceeded?.Invoke(this, new IoLimitEventArgs(IoLimitType.Write, violationInfo.IoWriteBytes));
+                if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectNotificationLimits.JobWriteBytes) != 0)
+                    IoLimitExceeded?.Invoke(this, new IoLimitEventArgs(IoLimitType.Write, violationInfo.IoWriteBytes));
 
-            if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectBasicLimits.JobTime) != 0)
-                TimeLimitExceeded?.Invoke(this, new TimeLimitEventArgs(TimeSpan.FromTicks(violationInfo.PerJobUserTime.QuadPart)));
+                if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectBasicLimits.JobTime) != 0)
+                    TimeLimitExceeded?.Invoke(this, new TimeLimitEventArgs(TimeSpan.FromTicks(violationInfo.PerJobUserTime.QuadPart)));
 
-            if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectExtendedLimits.JobMemory) != 0)
-                MemoryLimitExceeded?.Invoke(this, new MemoryLimitEventArgs(violationInfo.JobMemory));
+                if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectExtendedLimits.JobMemory) != 0)
+                    MemoryLimitExceeded?.Invoke(this, new MemoryLimitEventArgs(violationInfo.JobMemory));
 
-            if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectNotificationLimits.CpuRateControl) != 0)
-                CpuRateLimitExceeded?.Invoke(this, new RateLimitEventArgs((RateControlTolerance)violationInfo.RateControlTolerance));
+                if ((violationInfo.ViolationLimitFlags & Interop.Kernel32.JobObjectNotificationLimits.CpuRateControl) != 0)
+                    CpuRateLimitExceeded?.Invoke(this, new RateLimitEventArgs((RateControlTolerance)violationInfo.RateControlTolerance));
+            }
+        }
+
+        private void CompleteIdleTask ( bool cancelled )
+        {
+            if (_idleTaskCompletionSource != null)
+            {
+                lock (_idleTaskLock)
+                {
+                    if (_idleTaskCompletionSource == null)
+                        return;
+
+                    if (cancelled)
+                        _idleTaskCompletionSource.TrySetCanceled();
+                    else
+                        _idleTaskCompletionSource.TrySetResult(0);
+
+                    // when the tasked is completed, remove it 
+                    _idleTaskCompletionSource = null;
+                }
+            }
+        }
+
+        private Task GetIdleTask ()
+        {
+            CheckDisposed();
+
+            lock (_idleTaskLock)
+            {
+                // if we already have a Task created, return that task..
+                if (_idleTaskCompletionSource != null)
+                    return _idleTaskCompletionSource.Task;
+
+                var handleLocked = false;
+                var handle = GetHandle();
+
+                try
+                {
+                    // prevent the handle from being closed while we go through this..
+                    handle.DangerousAddRef(ref handleLocked);
+                    if (!handleLocked)
+                        throw new ObjectDisposedException(GetType().Name);
+
+                    // get the number of active processes within the job..
+                    if (!Interop.Kernel32.QueryInformationJobObject(handle,
+                                                                    Interop.Kernel32.JobObjectInformationClass.BasicAccountingInformation,
+                                                                    out Interop.Kernel32.JOBOBJECT_BASIC_ACCOUNTING_INFORMATION accountingInfo,
+                                                                    Interop.Kernel32.JOBOBJECT_BASIC_ACCOUNTING_INFORMATION.SizeOf,
+                                                                    IntPtr.Zero))
+                        Errors.Win32Error();
+
+                    // no active processes, return a completed task..
+                    if (accountingInfo.ActiveProcesses == 0)
+                        return Task.CompletedTask;
+
+                    _idleTaskCompletionSource = new TaskCompletionSource<int>(TaskCreationOptions.RunContinuationsAsynchronously);
+                    return _idleTaskCompletionSource.Task;
+                }
+                finally
+                {
+                    if (handleLocked) handle.DangerousRelease();
+                }
+            }
         }
 
         private protected override SafeJobObjectHandle GetHandle ()
@@ -474,7 +592,7 @@ namespace Fs.Processes.JobObjects
         /// <summary>
         /// Occurs when all processes assigned to the job have exited.
         /// </summary>
-        public event EventHandler<EventArgs> Idle;
+        public event EventHandler<EventArgs> Idled;
 
         /// <summary>
         /// Gets a value indicating whether the OS supports CPU rate limits.
@@ -485,6 +603,11 @@ namespace Fs.Processes.JobObjects
         /// Gets a value indicating whether the OS supports <see cref="JobNotifications"/>.
         /// </summary>
         public static bool SupportsNotifications { get => _jobsLimitViolationSupported; }
+
+        /// <summary>
+        /// Gets a task that completes when the number of active processes decreases to zero.
+        /// </summary>
+        public Task Idle { get { return GetIdleTask(); } }
 
         private sealed class CurrentJobObject : JobObjectInfo
         {
