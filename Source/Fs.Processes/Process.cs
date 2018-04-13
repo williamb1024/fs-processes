@@ -514,7 +514,7 @@ namespace Fs.Processes
             }
         }
 
-        private Task GetProcessExitedTask ()
+        private Task<int> GetProcessExitedTask ()
         {
             if (_exitedTask == null)
             {
@@ -903,7 +903,7 @@ namespace Fs.Processes
         /// if the <see cref="Process"/> is disposed before the process exits.
         /// </summary>
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
-        public Task Exited
+        public Task<int> Exited
         {
             get
             {
