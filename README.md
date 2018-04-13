@@ -1,4 +1,4 @@
-# ![icon](fs.process.png) Fs.Processes
+# <img src="fs.process.png" width="32" height="32"> Fs.Processes
 Fs.Processes is a library providing extended support for Windows CreateProcess and JobObject APIs.
 
 
