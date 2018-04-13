@@ -1,4 +1,9 @@
-﻿using System;
+﻿// 
+// This code borrows heavily from the .NET CoreFX project:
+//   Copyright (c) .NET Foundation and Contributors
+//
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;

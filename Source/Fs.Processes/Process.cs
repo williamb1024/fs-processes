@@ -1,4 +1,9 @@
-﻿using System;
+﻿// 
+// This code borrows heavily from the .NET CoreFX project:
+//   Copyright (c) .NET Foundation and Contributors
+//
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -40,7 +45,7 @@ namespace Fs.Processes
         private WaitHandle _waitHandle;
         private RegisteredWaitHandle _registeredWaitHandle;
         private TaskCompletionSource<int> _exitedTaskCompletionSource;
-        private Task _exitedTask;
+        private Task<int> _exitedTask;
         private int? _exitCode;
 
         private SafeProcessHandle _processHandle;
@@ -496,7 +501,16 @@ namespace Fs.Processes
                 if (isCancelled)
                     exitedTaskCompletionSource?.TrySetCanceled();
                 else
-                    exitedTaskCompletionSource?.TrySetResult(0);
+                {
+                    try
+                    {
+                        exitedTaskCompletionSource?.TrySetResult(GetProcessExitCode());
+                    }
+                    catch (Exception ex)
+                    {
+                        exitedTaskCompletionSource?.TrySetException(ex);
+                    }
+                }
             }
         }
 
@@ -509,13 +523,24 @@ namespace Fs.Processes
                     if (_exitedTask != null)
                         return _exitedTask;
 
+                    // duplicate the SafeProcessHandle because we might pass it off to the thread pool 
+                    // if the process hasn't already exited..
+
                     using (var processHandle = GetProcessHandle(Interop.ProcessAccess.Synchronize))
                     {
                         var processWaitHandle = new Interop.ProcessWaitHandle(processHandle);
                         if (processWaitHandle.WaitOne(0))
                         {
                             processWaitHandle.Dispose();
-                            return _exitedTask = Task.CompletedTask;
+
+                            try
+                            {
+                                return _exitedTask = Task.FromResult<int>(GetProcessExitCode());
+                            }
+                            catch (Exception ex)
+                            {
+                                return _exitedTask = Task.FromException<int>(ex);
+                            }
                         }
 
                         try
@@ -558,19 +583,22 @@ namespace Fs.Processes
             ErrorDataReceived?.Invoke(this, new ProcessDataReceivedEventArgs(data));
         }
 
+        private int GetProcessExitCode ()
+        {
+            if (!Interop.Kernel32.GetExitCodeProcess(_processHandle, out int exitCode))
+                throw Errors.Win32Error();
+
+            _exitCode = exitCode;
+            return exitCode;
+        }
+
         private int? GetExitCode ()
         {
             if (!_exitCode.HasValue)
             {
                 using (var processWaitHandle = new Interop.ProcessWaitHandle(_processHandle))
                     if (processWaitHandle.WaitOne(0))
-                    {
-                        if (!Interop.Kernel32.GetExitCodeProcess(_processHandle, out int exitCode))
-                            throw Errors.Win32Error();
-
-                        _exitCode = exitCode;
-                        return exitCode;
-                    }
+                        return GetProcessExitCode();
             }
 
             return _exitCode;
@@ -744,7 +772,7 @@ namespace Fs.Processes
 
             SortedDictionary<string, string> variablePairs = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
-            foreach (var drivePair in _driveLetters) 
+            foreach (var drivePair in _driveLetters)
                 if (!variables.ContainsKey(drivePair.Key))
                 {
                     var currentPath = Path.GetFullPath(drivePair.Value);
