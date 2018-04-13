@@ -829,10 +829,12 @@ namespace Fs.Processes
         /// </summary>
         public event EventHandler<ProcessDataReceivedEventArgs> ErrorDataReceived;
 
+#pragma warning disable CS0419 // Ambiguous reference in cref attribute
         /// <summary>
         /// Gets the <see cref="SafeProcessHandle"/> associated with this instance.
         /// </summary>
         public SafeProcessHandle Handle { get { CheckDisposed(); return _processHandle; } }
+#pragma warning restore CS0419 // Ambiguous reference in cref attribute
 
         /// <summary>
         /// Gets the unique identifier of the process.
