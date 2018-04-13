@@ -538,5 +538,11 @@ internal partial class Interop
 
         [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "TerminateJobObject")]
         internal static extern bool TerminateJobObject ( SafeJobObjectHandle hJob, int uExitCode );
+
+        [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "InitializeProcThreadAttributeList")]
+        internal static extern bool InitializeProcThreadAttributeList ( IntPtr lpAttributeList, uint dwAttributeCount, uint dwFlags, ref IntPtr lpSize );
+
+        [DllImport("kernel32.dll", EntryPoint = "DeleteProcThreadAttributeList")]
+        internal static extern void DeleteProcThreadAttributeList ( IntPtr lpAttributeList );
     }
 }
