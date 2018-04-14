@@ -39,6 +39,161 @@ references:
   isSpec: "True"
   fullName: Fs.Processes.ConsoleColors.Foreground
   nameWithType: ConsoleColors.Foreground
+- uid: Fs.Processes.CreateProcessAttributeList
+  name: CreateProcessAttributeList
+  href: api/Fs.Processes.CreateProcessAttributeList.html
+  commentId: T:Fs.Processes.CreateProcessAttributeList
+  fullName: Fs.Processes.CreateProcessAttributeList
+  nameWithType: CreateProcessAttributeList
+- uid: Fs.Processes.CreateProcessAttributeList.#ctor
+  name: CreateProcessAttributeList()
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList__ctor
+  commentId: M:Fs.Processes.CreateProcessAttributeList.#ctor
+  fullName: Fs.Processes.CreateProcessAttributeList.CreateProcessAttributeList()
+  nameWithType: CreateProcessAttributeList.CreateProcessAttributeList()
+- uid: Fs.Processes.CreateProcessAttributeList.#ctor*
+  name: CreateProcessAttributeList
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList__ctor_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.#ctor
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.CreateProcessAttributeList
+  nameWithType: CreateProcessAttributeList.CreateProcessAttributeList
+- uid: Fs.Processes.CreateProcessAttributeList.Add(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  name: Add(CreateProcessAttributeList.CreateProcessAttribute)
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Add_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute_
+  commentId: M:Fs.Processes.CreateProcessAttributeList.Add(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  fullName: Fs.Processes.CreateProcessAttributeList.Add(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  nameWithType: CreateProcessAttributeList.Add(CreateProcessAttributeList.CreateProcessAttribute)
+- uid: Fs.Processes.CreateProcessAttributeList.Add*
+  name: Add
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Add_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.Add
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.Add
+  nameWithType: CreateProcessAttributeList.Add
+- uid: Fs.Processes.CreateProcessAttributeList.Clear
+  name: Clear()
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Clear
+  commentId: M:Fs.Processes.CreateProcessAttributeList.Clear
+  fullName: Fs.Processes.CreateProcessAttributeList.Clear()
+  nameWithType: CreateProcessAttributeList.Clear()
+- uid: Fs.Processes.CreateProcessAttributeList.Clear*
+  name: Clear
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Clear_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.Clear
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.Clear
+  nameWithType: CreateProcessAttributeList.Clear
+- uid: Fs.Processes.CreateProcessAttributeList.Contains(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  name: Contains(CreateProcessAttributeList.CreateProcessAttribute)
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Contains_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute_
+  commentId: M:Fs.Processes.CreateProcessAttributeList.Contains(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  fullName: Fs.Processes.CreateProcessAttributeList.Contains(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  nameWithType: CreateProcessAttributeList.Contains(CreateProcessAttributeList.CreateProcessAttribute)
+- uid: Fs.Processes.CreateProcessAttributeList.Contains*
+  name: Contains
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Contains_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.Contains
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.Contains
+  nameWithType: CreateProcessAttributeList.Contains
+- uid: Fs.Processes.CreateProcessAttributeList.Count
+  name: Count
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Count
+  commentId: P:Fs.Processes.CreateProcessAttributeList.Count
+  fullName: Fs.Processes.CreateProcessAttributeList.Count
+  nameWithType: CreateProcessAttributeList.Count
+- uid: Fs.Processes.CreateProcessAttributeList.Count*
+  name: Count
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Count_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.Count
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.Count
+  nameWithType: CreateProcessAttributeList.Count
+- uid: Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute
+  name: CreateProcessAttributeList.CreateProcessAttribute
+  href: api/Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute.html
+  commentId: T:Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute
+  fullName: Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute
+  nameWithType: CreateProcessAttributeList.CreateProcessAttribute
+- uid: Fs.Processes.CreateProcessAttributeList.GetEnumerator
+  name: GetEnumerator()
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_GetEnumerator
+  commentId: M:Fs.Processes.CreateProcessAttributeList.GetEnumerator
+  fullName: Fs.Processes.CreateProcessAttributeList.GetEnumerator()
+  nameWithType: CreateProcessAttributeList.GetEnumerator()
+- uid: Fs.Processes.CreateProcessAttributeList.GetEnumerator*
+  name: GetEnumerator
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_GetEnumerator_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.GetEnumerator
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.GetEnumerator
+  nameWithType: CreateProcessAttributeList.GetEnumerator
+- uid: Fs.Processes.CreateProcessAttributeList.Remove(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  name: Remove(CreateProcessAttributeList.CreateProcessAttribute)
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Remove_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute_
+  commentId: M:Fs.Processes.CreateProcessAttributeList.Remove(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  fullName: Fs.Processes.CreateProcessAttributeList.Remove(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute)
+  nameWithType: CreateProcessAttributeList.Remove(CreateProcessAttributeList.CreateProcessAttribute)
+- uid: Fs.Processes.CreateProcessAttributeList.Remove*
+  name: Remove
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_Remove_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.Remove
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessAttributeList.Remove
+  nameWithType: CreateProcessAttributeList.Remove
+- uid: Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#CopyTo(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute[],System.Int32)
+  name: ICollection<CreateProcessAttributeList.CreateProcessAttribute>.CopyTo(CreateProcessAttributeList.CreateProcessAttribute[], Int32)
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_System_Collections_Generic_ICollection_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute__CopyTo_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute___System_Int32_
+  commentId: M:Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#CopyTo(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute[],System.Int32)
+  name.vb: System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo(CreateProcessAttributeList.CreateProcessAttribute(), Int32)
+  fullName: Fs.Processes.CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute[], System.Int32)
+  fullName.vb: Fs.Processes.CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo(Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute(), System.Int32)
+  nameWithType: CreateProcessAttributeList.ICollection<CreateProcessAttributeList.CreateProcessAttribute>.CopyTo(CreateProcessAttributeList.CreateProcessAttribute[], Int32)
+  nameWithType.vb: CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo(CreateProcessAttributeList.CreateProcessAttribute(), Int32)
+- uid: Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#CopyTo*
+  name: ICollection<CreateProcessAttributeList.CreateProcessAttribute>.CopyTo
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_System_Collections_Generic_ICollection_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute__CopyTo_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#CopyTo
+  isSpec: "True"
+  name.vb: System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo
+  fullName: Fs.Processes.CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo
+  nameWithType: CreateProcessAttributeList.ICollection<CreateProcessAttributeList.CreateProcessAttribute>.CopyTo
+  nameWithType.vb: CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.CopyTo
+- uid: Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#IsReadOnly
+  name: ICollection<CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_System_Collections_Generic_ICollection_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute__IsReadOnly
+  commentId: P:Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#IsReadOnly
+  name.vb: System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  fullName: Fs.Processes.CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  nameWithType: CreateProcessAttributeList.ICollection<CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  nameWithType.vb: CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+- uid: Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#IsReadOnly*
+  name: ICollection<CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_System_Collections_Generic_ICollection_Fs_Processes_CreateProcessAttributeList_CreateProcessAttribute__IsReadOnly_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.System#Collections#Generic#ICollection{Fs#Processes#CreateProcessAttributeList#CreateProcessAttribute}#IsReadOnly
+  isSpec: "True"
+  name.vb: System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  fullName: Fs.Processes.CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  nameWithType: CreateProcessAttributeList.ICollection<CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+  nameWithType.vb: CreateProcessAttributeList.System.Collections.Generic.ICollection<Fs.Processes.CreateProcessAttributeList.CreateProcessAttribute>.IsReadOnly
+- uid: Fs.Processes.CreateProcessAttributeList.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Fs.Processes.CreateProcessAttributeList.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Fs.Processes.CreateProcessAttributeList.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: CreateProcessAttributeList.IEnumerable.GetEnumerator()
+  nameWithType.vb: CreateProcessAttributeList.System.Collections.IEnumerable.GetEnumerator()
+- uid: Fs.Processes.CreateProcessAttributeList.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Fs.Processes.CreateProcessAttributeList.html#Fs_Processes_CreateProcessAttributeList_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Fs.Processes.CreateProcessAttributeList.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Fs.Processes.CreateProcessAttributeList.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: CreateProcessAttributeList.IEnumerable.GetEnumerator
+  nameWithType.vb: CreateProcessAttributeList.System.Collections.IEnumerable.GetEnumerator
 - uid: Fs.Processes.CreateProcessInfo
   name: CreateProcessInfo
   href: api/Fs.Processes.CreateProcessInfo.html
@@ -71,6 +226,19 @@ references:
   isSpec: "True"
   fullName: Fs.Processes.CreateProcessInfo.ArgumentsList
   nameWithType: CreateProcessInfo.ArgumentsList
+- uid: Fs.Processes.CreateProcessInfo.Attributes
+  name: Attributes
+  href: api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_Attributes
+  commentId: P:Fs.Processes.CreateProcessInfo.Attributes
+  fullName: Fs.Processes.CreateProcessInfo.Attributes
+  nameWithType: CreateProcessInfo.Attributes
+- uid: Fs.Processes.CreateProcessInfo.Attributes*
+  name: Attributes
+  href: api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_Attributes_
+  commentId: Overload:Fs.Processes.CreateProcessInfo.Attributes
+  isSpec: "True"
+  fullName: Fs.Processes.CreateProcessInfo.Attributes
+  nameWithType: CreateProcessInfo.Attributes
 - uid: Fs.Processes.CreateProcessInfo.ConsoleBufferSize
   name: ConsoleBufferSize
   href: api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_ConsoleBufferSize
@@ -409,6 +577,105 @@ references:
   isSpec: "True"
   fullName: Fs.Processes.CreateProcessInfo.WorkingDirectory
   nameWithType: CreateProcessInfo.WorkingDirectory
+- uid: Fs.Processes.InheritHandlesAttribute
+  name: InheritHandlesAttribute
+  href: api/Fs.Processes.InheritHandlesAttribute.html
+  commentId: T:Fs.Processes.InheritHandlesAttribute
+  fullName: Fs.Processes.InheritHandlesAttribute
+  nameWithType: InheritHandlesAttribute
+- uid: Fs.Processes.InheritHandlesAttribute.#ctor
+  name: InheritHandlesAttribute()
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute__ctor
+  commentId: M:Fs.Processes.InheritHandlesAttribute.#ctor
+  fullName: Fs.Processes.InheritHandlesAttribute.InheritHandlesAttribute()
+  nameWithType: InheritHandlesAttribute.InheritHandlesAttribute()
+- uid: Fs.Processes.InheritHandlesAttribute.#ctor(System.Collections.Generic.IEnumerable{System.IntPtr})
+  name: InheritHandlesAttribute(IEnumerable<IntPtr>)
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute__ctor_System_Collections_Generic_IEnumerable_System_IntPtr__
+  commentId: M:Fs.Processes.InheritHandlesAttribute.#ctor(System.Collections.Generic.IEnumerable{System.IntPtr})
+  name.vb: InheritHandlesAttribute(IEnumerable(Of IntPtr))
+  fullName: Fs.Processes.InheritHandlesAttribute.InheritHandlesAttribute(System.Collections.Generic.IEnumerable<System.IntPtr>)
+  fullName.vb: Fs.Processes.InheritHandlesAttribute.InheritHandlesAttribute(System.Collections.Generic.IEnumerable(Of System.IntPtr))
+  nameWithType: InheritHandlesAttribute.InheritHandlesAttribute(IEnumerable<IntPtr>)
+  nameWithType.vb: InheritHandlesAttribute.InheritHandlesAttribute(IEnumerable(Of IntPtr))
+- uid: Fs.Processes.InheritHandlesAttribute.#ctor(System.Collections.Generic.IEnumerable{System.Runtime.InteropServices.SafeHandle})
+  name: InheritHandlesAttribute(IEnumerable<SafeHandle>)
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute__ctor_System_Collections_Generic_IEnumerable_System_Runtime_InteropServices_SafeHandle__
+  commentId: M:Fs.Processes.InheritHandlesAttribute.#ctor(System.Collections.Generic.IEnumerable{System.Runtime.InteropServices.SafeHandle})
+  name.vb: InheritHandlesAttribute(IEnumerable(Of SafeHandle))
+  fullName: Fs.Processes.InheritHandlesAttribute.InheritHandlesAttribute(System.Collections.Generic.IEnumerable<System.Runtime.InteropServices.SafeHandle>)
+  fullName.vb: Fs.Processes.InheritHandlesAttribute.InheritHandlesAttribute(System.Collections.Generic.IEnumerable(Of System.Runtime.InteropServices.SafeHandle))
+  nameWithType: InheritHandlesAttribute.InheritHandlesAttribute(IEnumerable<SafeHandle>)
+  nameWithType.vb: InheritHandlesAttribute.InheritHandlesAttribute(IEnumerable(Of SafeHandle))
+- uid: Fs.Processes.InheritHandlesAttribute.#ctor*
+  name: InheritHandlesAttribute
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute__ctor_
+  commentId: Overload:Fs.Processes.InheritHandlesAttribute.#ctor
+  isSpec: "True"
+  fullName: Fs.Processes.InheritHandlesAttribute.InheritHandlesAttribute
+  nameWithType: InheritHandlesAttribute.InheritHandlesAttribute
+- uid: Fs.Processes.InheritHandlesAttribute.Add(System.IntPtr)
+  name: Add(IntPtr)
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_Add_System_IntPtr_
+  commentId: M:Fs.Processes.InheritHandlesAttribute.Add(System.IntPtr)
+  fullName: Fs.Processes.InheritHandlesAttribute.Add(System.IntPtr)
+  nameWithType: InheritHandlesAttribute.Add(IntPtr)
+- uid: Fs.Processes.InheritHandlesAttribute.Add(System.Runtime.InteropServices.SafeHandle)
+  name: Add(SafeHandle)
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_Add_System_Runtime_InteropServices_SafeHandle_
+  commentId: M:Fs.Processes.InheritHandlesAttribute.Add(System.Runtime.InteropServices.SafeHandle)
+  fullName: Fs.Processes.InheritHandlesAttribute.Add(System.Runtime.InteropServices.SafeHandle)
+  nameWithType: InheritHandlesAttribute.Add(SafeHandle)
+- uid: Fs.Processes.InheritHandlesAttribute.Add*
+  name: Add
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_Add_
+  commentId: Overload:Fs.Processes.InheritHandlesAttribute.Add
+  isSpec: "True"
+  fullName: Fs.Processes.InheritHandlesAttribute.Add
+  nameWithType: InheritHandlesAttribute.Add
+- uid: Fs.Processes.InheritHandlesAttribute.GetEnumerator
+  name: GetEnumerator()
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_GetEnumerator
+  commentId: M:Fs.Processes.InheritHandlesAttribute.GetEnumerator
+  fullName: Fs.Processes.InheritHandlesAttribute.GetEnumerator()
+  nameWithType: InheritHandlesAttribute.GetEnumerator()
+- uid: Fs.Processes.InheritHandlesAttribute.GetEnumerator*
+  name: GetEnumerator
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_GetEnumerator_
+  commentId: Overload:Fs.Processes.InheritHandlesAttribute.GetEnumerator
+  isSpec: "True"
+  fullName: Fs.Processes.InheritHandlesAttribute.GetEnumerator
+  nameWithType: InheritHandlesAttribute.GetEnumerator
+- uid: Fs.Processes.InheritHandlesAttribute.Handles
+  name: Handles
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_Handles
+  commentId: P:Fs.Processes.InheritHandlesAttribute.Handles
+  fullName: Fs.Processes.InheritHandlesAttribute.Handles
+  nameWithType: InheritHandlesAttribute.Handles
+- uid: Fs.Processes.InheritHandlesAttribute.Handles*
+  name: Handles
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_Handles_
+  commentId: Overload:Fs.Processes.InheritHandlesAttribute.Handles
+  isSpec: "True"
+  fullName: Fs.Processes.InheritHandlesAttribute.Handles
+  nameWithType: InheritHandlesAttribute.Handles
+- uid: Fs.Processes.InheritHandlesAttribute.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Fs.Processes.InheritHandlesAttribute.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Fs.Processes.InheritHandlesAttribute.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: InheritHandlesAttribute.IEnumerable.GetEnumerator()
+  nameWithType.vb: InheritHandlesAttribute.System.Collections.IEnumerable.GetEnumerator()
+- uid: Fs.Processes.InheritHandlesAttribute.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Fs.Processes.InheritHandlesAttribute.html#Fs_Processes_InheritHandlesAttribute_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Fs.Processes.InheritHandlesAttribute.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Fs.Processes.InheritHandlesAttribute.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: InheritHandlesAttribute.IEnumerable.GetEnumerator
+  nameWithType.vb: InheritHandlesAttribute.System.Collections.IEnumerable.GetEnumerator
 - uid: Fs.Processes.JobObjects
   name: Fs.Processes.JobObjects
   href: api/Fs.Processes.JobObjects.html
@@ -1657,6 +1924,38 @@ references:
   isSpec: "True"
   fullName: Fs.Processes.JobObjects.TimeLimitEventArgs.Time
   nameWithType: TimeLimitEventArgs.Time
+- uid: Fs.Processes.ParentProcessAttribute
+  name: ParentProcessAttribute
+  href: api/Fs.Processes.ParentProcessAttribute.html
+  commentId: T:Fs.Processes.ParentProcessAttribute
+  fullName: Fs.Processes.ParentProcessAttribute
+  nameWithType: ParentProcessAttribute
+- uid: Fs.Processes.ParentProcessAttribute.#ctor(Microsoft.Win32.SafeHandles.SafeProcessHandle)
+  name: ParentProcessAttribute(SafeProcessHandle)
+  href: api/Fs.Processes.ParentProcessAttribute.html#Fs_Processes_ParentProcessAttribute__ctor_Microsoft_Win32_SafeHandles_SafeProcessHandle_
+  commentId: M:Fs.Processes.ParentProcessAttribute.#ctor(Microsoft.Win32.SafeHandles.SafeProcessHandle)
+  fullName: Fs.Processes.ParentProcessAttribute.ParentProcessAttribute(Microsoft.Win32.SafeHandles.SafeProcessHandle)
+  nameWithType: ParentProcessAttribute.ParentProcessAttribute(SafeProcessHandle)
+- uid: Fs.Processes.ParentProcessAttribute.#ctor*
+  name: ParentProcessAttribute
+  href: api/Fs.Processes.ParentProcessAttribute.html#Fs_Processes_ParentProcessAttribute__ctor_
+  commentId: Overload:Fs.Processes.ParentProcessAttribute.#ctor
+  isSpec: "True"
+  fullName: Fs.Processes.ParentProcessAttribute.ParentProcessAttribute
+  nameWithType: ParentProcessAttribute.ParentProcessAttribute
+- uid: Fs.Processes.ParentProcessAttribute.Handle
+  name: Handle
+  href: api/Fs.Processes.ParentProcessAttribute.html#Fs_Processes_ParentProcessAttribute_Handle
+  commentId: P:Fs.Processes.ParentProcessAttribute.Handle
+  fullName: Fs.Processes.ParentProcessAttribute.Handle
+  nameWithType: ParentProcessAttribute.Handle
+- uid: Fs.Processes.ParentProcessAttribute.Handle*
+  name: Handle
+  href: api/Fs.Processes.ParentProcessAttribute.html#Fs_Processes_ParentProcessAttribute_Handle_
+  commentId: Overload:Fs.Processes.ParentProcessAttribute.Handle
+  isSpec: "True"
+  fullName: Fs.Processes.ParentProcessAttribute.Handle
+  nameWithType: ParentProcessAttribute.Handle
 - uid: Fs.Processes.Process
   name: Process
   href: api/Fs.Processes.Process.html
@@ -2089,6 +2388,38 @@ references:
   commentId: N:Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
   nameWithType: Microsoft.Win32.SafeHandles
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  name: SafeAccessTokenHandle
+  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html
+  commentId: T:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+  nameWithType: SafeAccessTokenHandle
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
+  name: SafeAccessTokenHandle(IntPtr)
+  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__ctor_System_IntPtr_
+  commentId: M:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.SafeAccessTokenHandle(System.IntPtr)
+  nameWithType: SafeAccessTokenHandle.SafeAccessTokenHandle(IntPtr)
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor*
+  name: SafeAccessTokenHandle
+  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__ctor_
+  commentId: Overload:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor
+  isSpec: "True"
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.SafeAccessTokenHandle
+  nameWithType: SafeAccessTokenHandle.SafeAccessTokenHandle
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  name: ReleaseHandle()
+  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle_ReleaseHandle
+  commentId: M:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle()
+  nameWithType: SafeAccessTokenHandle.ReleaseHandle()
+- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle*
+  name: ReleaseHandle
+  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle_ReleaseHandle_
+  commentId: Overload:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  isSpec: "True"
+  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
+  nameWithType: SafeAccessTokenHandle.ReleaseHandle
 - uid: Microsoft.Win32.SafeHandles.SafeIoCompletionPortHandle
   name: SafeIoCompletionPortHandle
   href: api/Microsoft.Win32.SafeHandles.SafeIoCompletionPortHandle.html

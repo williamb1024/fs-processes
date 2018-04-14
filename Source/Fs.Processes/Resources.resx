@@ -129,6 +129,9 @@
   <data name="CantSetDuplicatePassword" xml:space="preserve">
     <value>CreateProcessInfo.Password and CreateProcessInfo.PasswordInClearText cannot both be set. Use only one of them.</value>
   </data>
+  <data name="CanUseAttributesWithCreateProcessLogon" xml:space="preserve">
+    <value>CreateProcessInfo.Attributes and CreateProcessInfo.UserName are mutually exclusive.</value>
+  </data>
   <data name="DuplicateCompletionKey" xml:space="preserve">
     <value>The supplied key is already in use. This probably indicates a race condition with a reused handle.</value>
   </data>

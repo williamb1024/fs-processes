@@ -30,6 +30,20 @@ internal partial class Interop
             ref PROCESS_INFORMATION lpProcessInformation
         );
 
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true, BestFitMapping = false, EntryPoint = "CreateProcessW")]
+        internal static extern bool CreateProcess (
+            string lpApplicationName,
+            StringBuilder lpCommandLine,
+            ref SECURITY_ATTRIBUTES procSecAttrs,
+            ref SECURITY_ATTRIBUTES threadSecAttrs,
+            bool bInheritHandles,
+            int dwCreationFlags,
+            IntPtr lpEnvironment,
+            string lpCurrentDirectory,
+            ref STARTUPINFOEX lpStartupInfo,
+            ref PROCESS_INFORMATION lpProcessInformation
+        );
+
         [StructLayout(LayoutKind.Sequential)]
         internal struct PROCESS_INFORMATION
         {
@@ -64,6 +78,15 @@ internal partial class Interop
             internal IntPtr hStdInput;
             internal IntPtr hStdOutput;
             internal IntPtr hStdError;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        internal struct STARTUPINFOEX
+        {
+            internal static readonly int SizeOf = Marshal.SizeOf<STARTUPINFOEX>();
+
+            internal STARTUPINFO StartupInfo;
+            internal IntPtr lpAttributeList;
         }
 
         internal static class CREATEF
@@ -527,6 +550,46 @@ internal partial class Interop
             SiloTerminated = 13
         }
 
+        internal static class ProcThreadAttributes
+        {
+            private const int ProcThreadAttributeNumber = 0x0000FFFF;
+            private const int ProcThreadAttributeThread = 0x00010000;
+            private const int ProcThreadAttributeInput = 0x00020000;
+            private const int ProcThreadAttributeAdditive = 0x00040000;
+
+            // vista
+            internal static readonly int ParentProcess = Create(0, false, true, false);
+            internal static readonly int HandleList = Create(2, false, true, false);
+            internal static readonly int ProtectionLevel = Create(11, false, true, false);
+
+            // windows 7 
+            internal static readonly int GroupAffinity = Create(3, true, true, false);
+            internal static readonly int PreferredNode = Create(4, false, true, false);
+            internal static readonly int IdealProcessor = Create(5, true, true, false);
+            internal static readonly int UmsThread = Create(6, true, true, false);
+            internal static readonly int MitigationPolicy = Create(7, false, true, false);
+
+            // windows 8
+            internal static readonly int SecurityCapabilities = Create(9, false, true, false);
+
+            // windows 10 (winthreshold)
+            internal static readonly int JobList = Create(13, false, true, false);
+            internal static readonly int ChildProcessPolicy = Create(14, false, true, false);
+            internal static readonly int ApplicationPackagesPolicy = Create(15, false, true, false);
+            internal static readonly int Win32KFilter = Create(16, false, true, false);
+
+            // windows 10 (redstone 2)
+            internal static readonly int DesktopAppPolicy = Create(18, false, true, false);
+
+            private static int Create ( int number, bool thread, bool input, bool additive )
+            {
+                return (number & ProcThreadAttributeNumber) |
+                       ((thread) ? ProcThreadAttributeThread : 0) |
+                       ((input) ? ProcThreadAttributeInput : 0) |
+                       ((additive) ? ProcThreadAttributeAdditive : 0);
+            }
+        }
+
         [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "IsProcessInJob")]
         internal static extern bool IsProcessInJob ( IntPtr ProcessHandle, IntPtr JobHandle, out BOOL Result );
 
@@ -536,6 +599,9 @@ internal partial class Interop
         [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "TerminateProcess")]
         internal static extern bool TerminateProcess ( SafeProcessHandle hProcess, int exitCode );
 
+        [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "TerminateProcess")]
+        internal static extern bool TerminateProcess ( IntPtr hProcess, int exitCode );
+
         [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "TerminateJobObject")]
         internal static extern bool TerminateJobObject ( SafeJobObjectHandle hJob, int uExitCode );
 
@@ -544,5 +610,8 @@ internal partial class Interop
 
         [DllImport("kernel32.dll", EntryPoint = "DeleteProcThreadAttributeList")]
         internal static extern void DeleteProcThreadAttributeList ( IntPtr lpAttributeList );
+
+        [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "UpdateProcThreadAttribute")]
+        internal static extern bool UpdateProcThreadAttribute ( IntPtr lpAttributeList, uint dwFlags, IntPtr Attribute, IntPtr lpValue, IntPtr cbSize, IntPtr lpPreviousValue, IntPtr lpReturnSize );
     }
 }

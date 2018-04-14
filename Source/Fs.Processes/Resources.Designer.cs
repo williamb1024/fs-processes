@@ -97,6 +97,15 @@ namespace Fs.Processes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CreateProcessInfo.Attributes and CreateProcessInfo.UserName are mutually exclusive..
+        /// </summary>
+        internal static string CanUseAttributesWithCreateProcessLogon {
+            get {
+                return ResourceManager.GetString("CanUseAttributesWithCreateProcessLogon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The supplied key is already in use. This probably indicates a race condition with a reused handle..
         /// </summary>
         internal static string DuplicateCompletionKey {

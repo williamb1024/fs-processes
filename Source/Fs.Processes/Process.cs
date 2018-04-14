@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -259,7 +260,7 @@ namespace Fs.Processes
 
         private void CreateProcess ( CreateProcessInfo startupInfo, ProcessOptions processOptions )
         {
-            var processStartupInfo = new Interop.Kernel32.STARTUPINFO();
+            var processStartupInfo = new Interop.Kernel32.STARTUPINFOEX();
             var processInfo = new Interop.Kernel32.PROCESS_INFORMATION();
             var securityAttrs = new Interop.Kernel32.SECURITY_ATTRIBUTES();
 
@@ -285,10 +286,10 @@ namespace Fs.Processes
                 // if the parent process has unicode characters in it's environment, so we just always set it)
 
                 int createFlags = Interop.Kernel32.CREATEF.UnicodeEnvironment | (int)processOptions;
-                processStartupInfo.cb = Interop.Kernel32.STARTUPINFO.SizeOf;
+                processStartupInfo.StartupInfo.cb = Interop.Kernel32.STARTUPINFOEX.SizeOf;
 
                 // fill in most of STARTUPINFO (while validating it)
-                PrepareStartupInfo(ref processStartupInfo, startupInfo);
+                PrepareStartupInfo(ref processStartupInfo.StartupInfo, startupInfo);
 
                 // TODO: consider providing support for STARTUPINFOEX and eliminate the _createProcessLock, since we
                 //   can specify specific handles to inherit in the attribute list instead of "everything"... actually,
@@ -308,11 +309,11 @@ namespace Fs.Processes
                             CreatePipe(out parentOutputPipeHandle, out childOutputPipeHandle, Interop.Kernel32.HandleTypes.STD_OUTPUT_HANDLE, startupInfo.RedirectStandardOutput);
                             CreatePipe(out parentErrorPipeHandle, out childErrorPipeHandle, Interop.Kernel32.HandleTypes.STD_ERROR_HANDLE, startupInfo.RedirectStandardError);
 
-                            processStartupInfo.hStdInput = childInputPipeHandle.DangerousGetHandle();
-                            processStartupInfo.hStdOutput = childOutputPipeHandle.DangerousGetHandle();
-                            processStartupInfo.hStdError = childErrorPipeHandle.DangerousGetHandle();
+                            processStartupInfo.StartupInfo.hStdInput = childInputPipeHandle.DangerousGetHandle();
+                            processStartupInfo.StartupInfo.hStdOutput = childOutputPipeHandle.DangerousGetHandle();
+                            processStartupInfo.StartupInfo.hStdError = childErrorPipeHandle.DangerousGetHandle();
 
-                            processStartupInfo.dwFlags |= Interop.Kernel32.STARTF.USESTDHANDLES;
+                            processStartupInfo.StartupInfo.dwFlags |= Interop.Kernel32.STARTF.USESTDHANDLES;
                         }
 
                         string environmentBlock = null;
@@ -322,6 +323,10 @@ namespace Fs.Processes
                         string workingDirectory = startupInfo.WorkingDirectory;
                         if (String.IsNullOrEmpty(workingDirectory))
                             workingDirectory = Directory.GetCurrentDirectory();
+
+                        bool startupAttributesInitialized = false;
+                        IntPtr startupAttributes = IntPtr.Zero;
+                        SafeAccessTokenHandle tokenHandle = null;
 
                         try
                         {
@@ -336,7 +341,13 @@ namespace Fs.Processes
                                 if ((startupInfo.Password != null) && (startupInfo.PasswordInClearText != null))
                                     throw new ArgumentException(Resources.CantSetDuplicatePassword);
 
-                                Interop.Advapi32.LogonFlags logonFlags = (Interop.Advapi32.LogonFlags)0;
+                                if (startupInfo.HasAttributes)
+                                    throw new ArgumentException(Resources.CanUseAttributesWithCreateProcessLogon);
+
+                                // pass correct size of, since we can't use STARTUPINFOEX with CreateProcessWithLogonW
+                                processStartupInfo.StartupInfo.cb = Interop.Kernel32.STARTUPINFO.SizeOf;
+
+                                Interop.Advapi32.LogonFlags logonFlags = 0;
                                 IntPtr passwordPtr = IntPtr.Zero;
                                 GCHandle passwordHandle = default;
 
@@ -352,17 +363,17 @@ namespace Fs.Processes
                                         passwordHandle = GCHandle.Alloc(startupInfo.PasswordInClearText ?? String.Empty, GCHandleType.Pinned);
 
                                     if (!(processCreated = Interop.Advapi32.CreateProcessWithLogonW(
-                                        startupInfo.UserName,
-                                        startupInfo.Domain,
-                                        passwordHandle.IsAllocated ? passwordHandle.AddrOfPinnedObject() : passwordPtr,
-                                        logonFlags,
-                                        null,
-                                        commandLine,
-                                        createFlags,
-                                        (environmentBlock != null) ? environmentHandle.AddrOfPinnedObject() : IntPtr.Zero,
-                                        workingDirectory,
-                                        ref processStartupInfo,
-                                        ref processInfo)))
+                                            startupInfo.UserName,
+                                            startupInfo.Domain,
+                                            passwordHandle.IsAllocated ? passwordHandle.AddrOfPinnedObject() : passwordPtr,
+                                            logonFlags,
+                                            null,
+                                            commandLine,
+                                            createFlags,
+                                            (environmentBlock != null) ? environmentHandle.AddrOfPinnedObject() : IntPtr.Zero,
+                                            workingDirectory,
+                                            ref processStartupInfo,
+                                            ref processInfo)))
                                         processCreateError = Marshal.GetLastWin32Error();
                                 }
                                 finally
@@ -376,17 +387,20 @@ namespace Fs.Processes
                             }
                             else
                             {
+                                // handle attributes list for CreateProcess...
+                                CreateStartupAttributes(ref startupAttributes, ref startupAttributesInitialized, ref processStartupInfo, startupInfo);
+
                                 if (!(processCreated = Interop.Kernel32.CreateProcess(
-                                    null,
-                                    commandLine,
-                                    ref securityAttrs,
-                                    ref securityAttrs,
-                                    true,
-                                    createFlags,
-                                    (environmentBlock != null) ? environmentHandle.AddrOfPinnedObject() : IntPtr.Zero,
-                                    workingDirectory,
-                                    ref processStartupInfo,
-                                    ref processInfo)))
+                                        null,
+                                        commandLine,
+                                        ref securityAttrs,
+                                        ref securityAttrs,
+                                        true,
+                                        createFlags | Interop.Kernel32.CREATEF.ExtendedStartupInfo,
+                                        (environmentBlock != null) ? environmentHandle.AddrOfPinnedObject() : IntPtr.Zero,
+                                        workingDirectory,
+                                        ref processStartupInfo,
+                                        ref processInfo)))
                                     processCreateError = Marshal.GetLastWin32Error();
                             }
 
@@ -407,8 +421,16 @@ namespace Fs.Processes
                         }
                         finally
                         {
+                            if (startupAttributesInitialized)
+                                Interop.Kernel32.DeleteProcThreadAttributeList(startupAttributes);
+
+                            if (startupAttributes != IntPtr.Zero)
+                                Marshal.FreeHGlobal(startupAttributes);
+
                             if (environmentHandle.IsAllocated)
                                 environmentHandle.Free();
+
+                            tokenHandle?.Dispose();
                         }
                     }
                     finally
@@ -610,6 +632,83 @@ namespace Fs.Processes
                 throw new ObjectDisposedException(GetType().Name);
         }
 
+        private static void CreateProcessToken ( CreateProcessInfo createProcessInfo, StringBuilder commandLine, ref SafeAccessTokenHandle tokenHandle )
+        {
+            // This code use CreateProcessWithLogonW to start a process that we will intentionally terminate
+            // (it is started in a suspended) mode, in order to create a Token that we can use with 
+            // CreateProcessWithTokenW .. all of this so we can use extended attributes which CreateProcessWithLogonW
+            // doesn't support .. (also we want all of the work that CreateProcessWithLogonW does to prepare the
+            // desktop and window stations)
+
+            if (createProcessInfo.UserName.Length == 0)
+                throw new InvalidOperationException("CreateProcessToken requires UserName information.");
+
+            if ((createProcessInfo.Password != null) && (createProcessInfo.PasswordInClearText != null))
+                throw new ArgumentException(Resources.CantSetDuplicatePassword);
+
+            var processStartupInfo = new Interop.Kernel32.STARTUPINFOEX();
+            var processInfo = new Interop.Kernel32.PROCESS_INFORMATION();
+
+            bool processCreated = false;
+            IntPtr passwordPtr = IntPtr.Zero;
+            GCHandle passwordHandle = default;
+
+            try
+            {
+                if (createProcessInfo.Password != null)
+                    passwordPtr = Marshal.SecureStringToGlobalAllocUnicode(createProcessInfo.Password);
+
+                if (createProcessInfo.Password == null)
+                    passwordHandle = GCHandle.Alloc(createProcessInfo.PasswordInClearText ?? String.Empty, GCHandleType.Pinned);
+
+                processCreated = Interop.Advapi32.CreateProcessWithLogonW(
+                        createProcessInfo.UserName,
+                        createProcessInfo.Domain,
+                        passwordHandle.IsAllocated ? passwordHandle.AddrOfPinnedObject() : passwordPtr,
+                        0,
+                        null,
+                        commandLine,
+                        Interop.Kernel32.CREATEF.Suspended,
+                        IntPtr.Zero,
+                        null,
+                        ref processStartupInfo,
+                        ref processInfo);
+
+                if (!processCreated)
+                {
+                    int processCreateError = Marshal.GetLastWin32Error();
+                    if ((processCreateError == Interop.Errors.ERROR_BAD_EXE_FORMAT) ||
+                        (processCreateError == Interop.Errors.ERROR_EXE_MACHINE_TYPE_MISMATCH))
+                        throw new System.ComponentModel.Win32Exception(Resources.InvalidApplication);
+
+                    throw Errors.Win32Error(processCreateError);
+                }
+
+                if (!Interop.Advapi32.OpenProcessToken(processInfo.hProcess,
+                                                       Interop.TokenAccess.Query | Interop.TokenAccess.Duplicate | Interop.TokenAccess.AssignPrimary,
+                                                       out tokenHandle))
+                    throw Errors.Win32Error();
+            }
+            finally
+            {
+                if (processCreated)
+                    // terminate our temporary process..
+                    Interop.Kernel32.TerminateProcess(processInfo.hProcess, -1);
+
+                if (passwordPtr != IntPtr.Zero)
+                    Marshal.ZeroFreeGlobalAllocUnicode(passwordPtr);
+
+                if (passwordHandle.IsAllocated)
+                    passwordHandle.Free();
+
+                if ((processInfo.hProcess != IntPtr.Zero) && (processInfo.hProcess != INVALID_HANDLE_VALUE))
+                    Interop.Kernel32.CloseHandle(processInfo.hProcess);
+
+                if ((processInfo.hThread != IntPtr.Zero) && (processInfo.hThread != INVALID_HANDLE_VALUE))
+                    Interop.Kernel32.CloseHandle(processInfo.hThread);
+            }
+        }
+
         private static void CreatePipe ( out SafeFileHandle readHandle, out SafeFileHandle writeHandle )
         {
             var securityAttributes = new Interop.Kernel32.SECURITY_ATTRIBUTES { bInheritHandle = Interop.BOOL.TRUE };
@@ -653,6 +752,64 @@ namespace Fs.Processes
                 parentHandle = null;
                 childHandle = new SafeFileHandle(Interop.Kernel32.GetStdHandle(stdHandle), false);
             }
+        }
+
+        private static void CreateStartupAttributes ( ref IntPtr attributesPtr, ref bool attributesInitialized, ref Interop.Kernel32.STARTUPINFOEX startupInfo, CreateProcessInfo createProcessInfo )
+        {
+            if (attributesPtr != IntPtr.Zero)
+                throw new ArgumentException("attributesPtr must be initialized to IntPtr.Zero", nameof(attributesPtr));
+
+            if (attributesInitialized)
+                throw new ArgumentException("attributesInitialized be initialized to false", nameof(attributesInitialized));
+
+            // get the list of attributes provided by the caller. In some cases, we may replace 
+            // or add to the provided attributes..
+
+            List<CreateProcessAttributeList.CreateProcessAttribute> attributes = (createProcessInfo.HasAttributes) ?
+                createProcessInfo.Attributes.ToList() :
+                new List<CreateProcessAttributeList.CreateProcessAttribute>();
+
+            if ((startupInfo.StartupInfo.dwFlags & Interop.Kernel32.STARTF.USESTDHANDLES) != 0)
+            {
+                // standard handles are being redirected, we need to ensure that the handles are inherited
+                // by the child process .. we'll create a new handle list attribute with our standard handles
+                // and add any existing handle list handles to the new attribute..
+
+                var newHandlesAttribute = new InheritHandlesAttribute()
+                {
+                    startupInfo.StartupInfo.hStdInput,
+                    startupInfo.StartupInfo.hStdOutput,
+                    startupInfo.StartupInfo.hStdError
+                };
+
+                int attributeIndex;
+                InheritHandlesAttribute oldAttribute = null;
+                for (attributeIndex = 0; attributeIndex < attributes.Count; attributeIndex++)
+                    if (attributes[attributeIndex].GetType() == typeof(InheritHandlesAttribute))
+                    {
+                        oldAttribute = (InheritHandlesAttribute)attributes[attributeIndex];
+                        break;
+                    }
+
+                if (oldAttribute != null)
+                {
+                    // copy handles from the original handle list and append them to the new list..
+                    foreach (var handle in oldAttribute)
+                        newHandlesAttribute.Add(handle);
+
+                    // replace the original handles list with our new handles list..
+                    attributes[attributeIndex] = newHandlesAttribute;
+                }
+                else
+                    // no inherited handles in the supplied list of attributes, so just add the new one..
+                    attributes.Add(newHandlesAttribute);
+            }
+
+            // allocate the attribute list..
+            CreateProcessAttributeList.GetAttributesList(ref attributesPtr, ref attributesInitialized, attributes);
+
+            // set the attribute list pointer..
+            startupInfo.lpAttributeList = attributesPtr;
         }
 
         private static void PrepareStartupInfo ( ref Interop.Kernel32.STARTUPINFO startupInfo, CreateProcessInfo createProcessInfo )
@@ -846,7 +1003,6 @@ namespace Fs.Processes
                 throw new ArgumentException(Resources.ProcessOptionsInvalid, parameterName);
         }
 
-
         /// <summary>
         /// Occurs each time a process writes data to its redirected <see cref="StandardOutput"/> stream.
         /// </summary>
@@ -945,7 +1101,7 @@ namespace Fs.Processes
             public StreamReader StandardError { get { return _process._standardError; } }
             public StreamReaderMode StandardErrorMode { get { return _process._standardErrorMode; } }
             public ProcessStreamReader StandardErrorReader { get { return _process._standardErrorReader; } }
-            public Task Exited { get { return _process._exitedTask; } }
+            public Task<int> Exited { get { return _process._exitedTask; } }
             public int? ExitCode { get { return _process._exitCode; } }
         }
     }

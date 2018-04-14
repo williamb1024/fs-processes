@@ -19,6 +19,7 @@ namespace Fs.Processes
         private string _workingDirectory;
         private List<string> _argumentsList;
         private Dictionary<string, string> _environment;
+        private CreateProcessAttributeList _attributeList;
 
         private static Dictionary<string, string> GetCurrentEnvironment ()
         {
@@ -37,6 +38,7 @@ namespace Fs.Processes
         internal bool HasStandardRedirect { get { return ((RedirectStandardInput) || (RedirectStandardOutput) || (RedirectStandardError)); } }
         internal bool HasArgumentsList { get { return (_argumentsList != null) && (_argumentsList.Count > 0); } }
         internal bool HasEnvironment { get { return _environment != null; } }
+        internal bool HasAttributes { get { return (_attributeList != null) && (_attributeList.Count != 0); } }
 
         /// <summary>
         /// Gets or sets the executable name for the process.
@@ -184,6 +186,11 @@ namespace Fs.Processes
         /// new process's command line. This property cannot be used with <see cref="Arguments"/>.
         /// </summary>
         public IList<string> ArgumentsList { get { return (_argumentsList ?? (_argumentsList = new List<string>())); } }
+
+        /// <summary>
+        /// Gets the list of attributes that contains attributes applied to the new process.
+        /// </summary>
+        public CreateProcessAttributeList Attributes { get { return (_attributeList ?? (_attributeList = new CreateProcessAttributeList())); } }
 
         /// <summary>
         /// Gets or sets a value indicating whether the input for the new process is read from the
