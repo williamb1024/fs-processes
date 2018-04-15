@@ -387,15 +387,17 @@ namespace Fs.Processes
                             }
                             else
                             {
+                                bool inheritHandles = false;
+
                                 // handle attributes list for CreateProcess...
-                                CreateStartupAttributes(ref startupAttributes, ref startupAttributesInitialized, ref processStartupInfo, startupInfo);
+                                CreateStartupAttributes(ref startupAttributes, ref startupAttributesInitialized, ref inheritHandles, ref processStartupInfo, startupInfo);
 
                                 if (!(processCreated = Interop.Kernel32.CreateProcess(
                                         null,
                                         commandLine,
                                         ref securityAttrs,
                                         ref securityAttrs,
-                                        true,
+                                        inheritHandles,
                                         createFlags | Interop.Kernel32.CREATEF.ExtendedStartupInfo,
                                         (environmentBlock != null) ? environmentHandle.AddrOfPinnedObject() : IntPtr.Zero,
                                         workingDirectory,
@@ -754,7 +756,7 @@ namespace Fs.Processes
             }
         }
 
-        private static void CreateStartupAttributes ( ref IntPtr attributesPtr, ref bool attributesInitialized, ref Interop.Kernel32.STARTUPINFOEX startupInfo, CreateProcessInfo createProcessInfo )
+        private static void CreateStartupAttributes ( ref IntPtr attributesPtr, ref bool attributesInitialized, ref bool inheritHandles, ref Interop.Kernel32.STARTUPINFOEX startupInfo, CreateProcessInfo createProcessInfo )
         {
             if (attributesPtr != IntPtr.Zero)
                 throw new ArgumentException("attributesPtr must be initialized to IntPtr.Zero", nameof(attributesPtr));
@@ -774,6 +776,9 @@ namespace Fs.Processes
                 // standard handles are being redirected, we need to ensure that the handles are inherited
                 // by the child process .. we'll create a new handle list attribute with our standard handles
                 // and add any existing handle list handles to the new attribute..
+
+                // tell the caller to pass true to inheritHandles..
+                inheritHandles = true;
 
                 var newHandlesAttribute = new InheritHandlesAttribute()
                 {
@@ -804,6 +809,9 @@ namespace Fs.Processes
                     // no inherited handles in the supplied list of attributes, so just add the new one..
                     attributes.Add(newHandlesAttribute);
             }
+
+            // set inheritHandles if the attribute list contains an InheritHandlesAttribute..
+            inheritHandles = (inheritHandles) || attributes.Any(a => a.GetType() == typeof(InheritHandlesAttribute));
 
             // allocate the attribute list..
             CreateProcessAttributeList.GetAttributesList(ref attributesPtr, ref attributesInitialized, attributes);
