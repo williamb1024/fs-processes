@@ -7,9 +7,12 @@
     <RepositoryUrl>https://github.com/williamb1024/fs-processes.git</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Windows Process JobObject Async</PackageTags>
-    <Description>A library for managing Windows Processes and JobObjects.</Description>
+    <Description>A library for creating Windows Processes and Job Objects.</Description>
     <Company />
     <Authors>williamb</Authors>
+    <Copyright>Copyright William Brooks</Copyright>
+    <PackageLicenseUrl>https://github.com/williamb1024/fs-processes/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/williamb1024/fs-processes/blob/master/fs.process.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -18,6 +21,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>latest</LangVersion>
     <DocumentationFile>bin\Release\netstandard2.0\Fs.Processes.xml</DocumentationFile>
   </PropertyGroup>
 
