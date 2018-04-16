@@ -227,7 +227,9 @@ internal partial class Interop
         [StructLayout(LayoutKind.Sequential)]
         internal struct SECURITY_ATTRIBUTES
         {
-            internal uint nLength;
+            internal static readonly int SizeOf = Marshal.SizeOf<SECURITY_ATTRIBUTES>();
+
+            internal int nLength;
             internal IntPtr lpSecurityDescriptor;
             internal BOOL bInheritHandle;
         }

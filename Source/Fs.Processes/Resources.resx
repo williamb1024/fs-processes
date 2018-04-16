@@ -177,4 +177,13 @@
   <data name="WaitTillExit" xml:space="preserve">
     <value>Process must exit before requested information can be determined.</value>
   </data>
+  <data name="NameCannotBeEmpty" xml:space="preserve">
+    <value>The name cannot be an empty string.</value>
+  </data>
+  <data name="JobObjectCannotBeOpenedException" xml:space="preserve">
+    <value>No handle of the given name exists.</value>
+  </data>
+  <data name="JobObjectCannotBeOpened_InvalidHandle" xml:space="preserve">
+    <value>A job object with the system-wide name '{0}' cannot be created. An object of a different type might have the same name.</value>
+  </data>
 </root>

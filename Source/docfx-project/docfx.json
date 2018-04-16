@@ -12,7 +12,7 @@
       "dest": "api",
       "disableGitFeatures": false,
       "properties": {
-        "TargetFramework": "netstandard2.0"
+        "TargetFramework": "net47"
       }
     }
   ],
@@ -52,6 +52,10 @@
       }
     ],
     "dest": "../../docs",
+    "globalMetadata" : {
+      "_appTitle" : "Fs.Processes Documentation",
+      "_appLogoPath" : "images/Fs.Process.png"
+    },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

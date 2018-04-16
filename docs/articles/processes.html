@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Processes | Fs.Processes Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Processes | Fs.Processes Documentation ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/Fs.Process.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="processes">Processes</h1>
+
+<h4 id="start-a-new-process">Start a New Process</h4>
+<p>Starting a new process consists of constructing and initializing an instance of <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a>, followed by passing the newly constructed instance to one of the <a class="xref" href="../api/Fs.Processes.Process.html">Process</a> constructors.</p>
+<p>At its most basic, creating an new process is as follows. This code creates a new instance of <code>notepad.exe</code>.</p>
+<pre><code class="lang-CSharp">using (var process = new Process(new CreateProcessInfo {
+    FileName = &quot;notepad.exe&quot;
+})) {
+    // the new process continues to run even after the process
+    // variable is disposed.
+}
+</code></pre><h5 id="settings-for-the-new-process">Settings for the New Process</h5>
+<p>Choosing the executable and arguments for a process is done through the <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a> class. The properties of the <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a> class are nearly identical to <a href="https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo(v=vs.110).aspx">System.Diagnostics.ProcessStartInfo</a> properties.</p>
+<p>The <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_FileName">FileName</a> property indicates the name of executable image. The <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_Arguments">Arguments</a> and <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_ArgumentsList">ArgumentsList</a> properties are used to provide arguments for the new process.</p>
+<p>Only one of <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_Arguments">Arguments</a> and <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_ArgumentsList">ArgumentsList</a> may be used. The contents of <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_Arguments">Arguments</a> is passed as the command line arguments to the new process exactly as-is. The elements of <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_ArgumentsList">ArgumentsList</a> are escaped according the requirements of <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb776391(v=vs.85).aspx">CommandLineToArgvW</a> and join by space separators.</p>
+<p>You may further control how the new process is created by passing a set of <a class="xref" href="../api/Fs.Processes.ProcessOptions.html">ProcessOptions</a> flags to <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process__ctor_Fs_Processes_CreateProcessInfo_Fs_Processes_ProcessOptions_">Process(CreateProcessInfo, ProcessOptions)</a>. For example, you may use <a class="xref" href="../api/Fs.Processes.ProcessOptions.html#Fs_Processes_ProcessOptions_Suspended">ProcessOptions.Suspended</a> to create the new process in a suspended state.</p>
+<h4 id="handle-inheritance">Handle Inheritance</h4>
+<p>Handle inheritance operates different when creating a new process with the <a class="xref" href="../api/Fs.Processes.Process.html">Process</a> class. Unlike <a href="https://msdn.microsoft.com/en-us/library/system.diagnostics.process(v=vs.110).aspx">System.Diagnositcs.Process</a> inheritable handles are not automatically inherited by the child process. Only handles listed in a <a class="xref" href="../api/Fs.Processes.InheritHandlesAttribute.html">InheritHandlesAttribute</a> instance added to <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_Attributes">CreateProcessInfo.Attributes</a> are inherited by the new process.</p>
+<pre><code class="lang-CSharp">var createProcessInfo = new CreateProcessInfo {
+    FileName = &quot;process.exe&quot;,
+    Attributes = {
+        new InheritHandleAttribute { 
+            HandleOne,
+            HandleTwo,
+            HandleTree
+        }
+    }
+};
+</code></pre><p>The process created with the <code>createProcessInfo</code> settings above will inherit handles <code>HandleOne</code>, <code>HandleTwo</code> and <code>HandleThree</code>. The handles must be marked as inheritable.</p>
+<h5 id="exception-to-the-rule">Exception to the Rule</h5>
+<p>When <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_UserName">CreateProcessInfo.UserName</a> handle inheritance reverts to inheriting all inheritable handles from the current process. The Windows <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms682431(v=vs.85).aspx">CreateProcessWithLogonW</a> API does not support <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms686329(v=vs.85).aspx">STARTUPINFOEX</a>.</p>
+<h4 id="wait-for-a-process-to-exit">Wait for a Process to Exit</h4>
+<p>Use the <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_Exited">Process.Exited</a> property to determine when a process has exited. <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_Exited">Process.Exited</a> property returns <code>Task&lt;int&gt;</code> that completes when the process has exited.</p>
+<p>If the <a class="xref" href="../api/Fs.Processes.Process.html">Process</a> is disposed before the underlying process exists, the <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_Exited">Process.Exited</a> task is transitioned to a canceled state.</p>
+<h4 id="redirect-standard-output">Redirect Standard Output</h4>
+<p>The <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html">CreateProcessInfo</a> class provides three properties to enable I/O redirection: <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_RedirectStandardInput">RedirectStandardInput</a>, <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_RedirectStandardOutput">RedirectStandardOutput</a> and <a class="xref" href="../api/Fs.Processes.CreateProcessInfo.html#Fs_Processes_CreateProcessInfo_RedirectStandardError">RedirectStandardError</a>. Set one or more of these properties to <code>true</code> to enable I/O redirection for the new process.</p>
+<p>Once the new process has started, you may use the <a class="xref" href="../api/Fs.Processes.Process.html">Process</a>&#39;s class <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_StandardInput">StandardInput</a>, <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_StandardOutput">StandardOutput</a> or <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_StandardError">StandardError</a> properties to access the redirected streams. Be aware that accessing more than one stream in a synchronous manner may lead to a deadlock.</p>
+<h5 id="asynchronous-reading">Asynchronous Reading</h5>
+<p>Rather than using the <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_StandardOutput">StandardOutput</a> or <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_StandardError">StandardError</a>, you may use <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_BeginReadingStandardOutputAsync_System_Boolean_">BeginReadingStandardOutputAsync(Boolean)</a> or <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_BeginReadingStandardErrorAsync_System_Boolean_">BeginReadingStandardErrorAsync(Boolean)</a>.</p>
+<p>Using <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_BeginReadingStandardOutputAsync_System_Boolean_">BeginReadingStandardOutputAsync(Boolean)</a> or <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_BeginReadingStandardErrorAsync_System_Boolean_">BeginReadingStandardErrorAsync(Boolean)</a> along with <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_OutputDataReceived">OutputDataReceived</a> and <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_ErrorDataReceived">ErrorDataReceived</a> events enables asynchronous reading of the redirected streams.</p>
+<p>Both <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_BeginReadingStandardOutputAsync_System_Boolean_">BeginReadingStandardOutputAsync(Boolean)</a> and <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_BeginReadingStandardErrorAsync_System_Boolean_">BeginReadingStandardErrorAsync(Boolean)</a> return a <code>Task</code> instance that completes when no more data will be read from the underlying stream. If <a class="xref" href="../api/Fs.Processes.Process.html#Fs_Processes_Process_Dispose">Dispose()</a> is called before the streams complete reading, the <code>Task</code> will be transitioned to an canceled state.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/docfx-project/articles/processes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -169,6 +169,33 @@ namespace Fs.Processes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A job object with the system-wide name &apos;{0}&apos; cannot be created. An object of a different type might have the same name..
+        /// </summary>
+        internal static string JobObjectCannotBeOpened_InvalidHandle {
+            get {
+                return ResourceManager.GetString("JobObjectCannotBeOpened_InvalidHandle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No handle of the given name exists..
+        /// </summary>
+        internal static string JobObjectCannotBeOpenedException {
+            get {
+                return ResourceManager.GetString("JobObjectCannotBeOpenedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name cannot be an empty string..
+        /// </summary>
+        internal static string NameCannotBeEmpty {
+            get {
+                return ResourceManager.GetString("NameCannotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An async read operation has already been started on the stream..
         /// </summary>
         internal static string PendingAsyncOperation {

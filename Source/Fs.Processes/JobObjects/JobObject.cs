@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+#if NET46 || NET47
+using System.Security.AccessControl;
+#endif
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -51,6 +54,61 @@ namespace Fs.Processes.JobObjects
             }
         }
 
+#if NET46 || NET47
+        //public JobObject ( string name, out bool createdNew, JobObjectSecurity jobObjectSecurity )
+        //{
+        //    if (name == null)
+        //        throw new ArgumentNullException(nameof(name));
+
+        //    if (name.Length == 0)
+        //        throw new ArgumentException(Resources.NameCannotBeEmpty, nameof(name));
+
+        //    try
+        //    {
+        //        _completionPort = JobObjectCompletionPort.GetCompletionPort();
+
+        //        GCHandle securityDescriptorHandle = default;
+        //        try
+        //        {
+        //            Interop.Kernel32.SECURITY_ATTRIBUTES securityAttributes = new Interop.Kernel32.SECURITY_ATTRIBUTES();
+        //            securityAttributes.nLength = Interop.Kernel32.SECURITY_ATTRIBUTES.SizeOf;
+
+        //            if (jobObjectSecurity != null)
+        //            {
+        //                securityDescriptorHandle = GCHandle.Alloc(jobObjectSecurity.GetSecurityDescriptorBinaryForm(), GCHandleType.Pinned);
+        //                securityAttributes.lpSecurityDescriptor = securityDescriptorHandle.AddrOfPinnedObject();
+        //            }
+
+        //            _handle = Interop.Kernel32.CreateJobObject(ref securityAttributes, name);
+        //            if ((_handle == null) || (_handle.IsInvalid))
+        //            {
+        //                int errorCode = Marshal.GetLastWin32Error();
+        //                if (errorCode == Interop.Errors.ERROR_INVALID_HANDLE)
+        //                    throw new JobObjectCannotBeOpenedException(String.Format(Resources.JobObjectCannotBeOpened_InvalidHandle, name));
+
+        //                throw Errors.Win32Error(errorCode);
+        //            }
+
+        //            // TODO: can we assign a completion port to the handle willy-nilly or does it replace an existing port????
+
+        //            createdNew = Marshal.GetLastWin32Error() != Interop.Errors.ERROR_ALREADY_EXISTS;
+
+        //            AssociateWithPort();
+
+        //        }
+        //        finally
+        //        {
+        //            if (securityDescriptorHandle.IsAllocated)
+        //                securityDescriptorHandle.Free();
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        Dispose();
+        //        throw;
+        //    }
+        //}
+#endif
         private void Dispose ( bool disposing )
         {
             // remove completion handler before disposing handle, this should prevent a possible race with

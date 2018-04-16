@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: ApiIndex
+  name: Fs.Processes
+  href: api/index.html
 - uid: Fs.Processes
   name: Fs.Processes
   href: api/Fs.Processes.html
@@ -1550,6 +1553,43 @@ references:
   commentId: E:Fs.Processes.JobObjects.JobObject.TimeLimitExceeded
   fullName: Fs.Processes.JobObjects.JobObject.TimeLimitExceeded
   nameWithType: JobObject.TimeLimitExceeded
+- uid: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException
+  name: JobObjectCannotBeOpenedException
+  href: api/Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.html
+  commentId: T:Fs.Processes.JobObjects.JobObjectCannotBeOpenedException
+  fullName: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException
+  nameWithType: JobObjectCannotBeOpenedException
+- uid: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor
+  name: JobObjectCannotBeOpenedException()
+  href: api/Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.html#Fs_Processes_JobObjects_JobObjectCannotBeOpenedException__ctor
+  commentId: M:Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor
+  fullName: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException()
+  nameWithType: JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException()
+- uid: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: JobObjectCannotBeOpenedException(SerializationInfo, StreamingContext)
+  href: api/Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.html#Fs_Processes_JobObjects_JobObjectCannotBeOpenedException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException(SerializationInfo, StreamingContext)
+- uid: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor(System.String)
+  name: JobObjectCannotBeOpenedException(String)
+  href: api/Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.html#Fs_Processes_JobObjects_JobObjectCannotBeOpenedException__ctor_System_String_
+  commentId: M:Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor(System.String)
+  fullName: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException(System.String)
+  nameWithType: JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException(String)
+- uid: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor(System.String,System.Exception)
+  name: JobObjectCannotBeOpenedException(String, Exception)
+  href: api/Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.html#Fs_Processes_JobObjects_JobObjectCannotBeOpenedException__ctor_System_String_System_Exception_
+  commentId: M:Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor(System.String,System.Exception)
+  fullName: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException(System.String, System.Exception)
+  nameWithType: JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException(String, Exception)
+- uid: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor*
+  name: JobObjectCannotBeOpenedException
+  href: api/Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.html#Fs_Processes_JobObjects_JobObjectCannotBeOpenedException__ctor_
+  commentId: Overload:Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.#ctor
+  isSpec: "True"
+  fullName: Fs.Processes.JobObjects.JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException
+  nameWithType: JobObjectCannotBeOpenedException.JobObjectCannotBeOpenedException
 - uid: Fs.Processes.JobObjects.JobObjectInfo
   name: JobObjectInfo
   href: api/Fs.Processes.JobObjects.JobObjectInfo.html
@@ -2382,44 +2422,15 @@ references:
   commentId: F:Fs.Processes.WindowShow.Normal
   fullName: Fs.Processes.WindowShow.Normal
   nameWithType: WindowShow.Normal
+- uid: GettingStarted
+  name: Getting Started
+  href: articles/gettingstarted.html
 - uid: Microsoft.Win32.SafeHandles
   name: Microsoft.Win32.SafeHandles
   href: api/Microsoft.Win32.SafeHandles.html
   commentId: N:Microsoft.Win32.SafeHandles
   fullName: Microsoft.Win32.SafeHandles
   nameWithType: Microsoft.Win32.SafeHandles
-- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
-  name: SafeAccessTokenHandle
-  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html
-  commentId: T:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
-  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
-  nameWithType: SafeAccessTokenHandle
-- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
-  name: SafeAccessTokenHandle(IntPtr)
-  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__ctor_System_IntPtr_
-  commentId: M:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor(System.IntPtr)
-  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.SafeAccessTokenHandle(System.IntPtr)
-  nameWithType: SafeAccessTokenHandle.SafeAccessTokenHandle(IntPtr)
-- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor*
-  name: SafeAccessTokenHandle
-  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__ctor_
-  commentId: Overload:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.#ctor
-  isSpec: "True"
-  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.SafeAccessTokenHandle
-  nameWithType: SafeAccessTokenHandle.SafeAccessTokenHandle
-- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
-  name: ReleaseHandle()
-  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle_ReleaseHandle
-  commentId: M:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
-  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle()
-  nameWithType: SafeAccessTokenHandle.ReleaseHandle()
-- uid: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle*
-  name: ReleaseHandle
-  href: api/Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.html#Microsoft_Win32_SafeHandles_SafeAccessTokenHandle_ReleaseHandle_
-  commentId: Overload:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
-  isSpec: "True"
-  fullName: Microsoft.Win32.SafeHandles.SafeAccessTokenHandle.ReleaseHandle
-  nameWithType: SafeAccessTokenHandle.ReleaseHandle
 - uid: Microsoft.Win32.SafeHandles.SafeIoCompletionPortHandle
   name: SafeIoCompletionPortHandle
   href: api/Microsoft.Win32.SafeHandles.SafeIoCompletionPortHandle.html
@@ -2534,3 +2545,384 @@ references:
   isSpec: "True"
   fullName: Microsoft.Win32.SafeHandles.SafeThreadHandle.ReleaseHandle
   nameWithType: SafeThreadHandle.ReleaseHandle
+- uid: System.Security.AccessControl
+  name: System.Security.AccessControl
+  href: api/System.Security.AccessControl.html
+  commentId: N:System.Security.AccessControl
+  fullName: System.Security.AccessControl
+  nameWithType: System.Security.AccessControl
+- uid: System.Security.AccessControl.JobObjectAccessRule
+  name: JobObjectAccessRule
+  href: api/System.Security.AccessControl.JobObjectAccessRule.html
+  commentId: T:System.Security.AccessControl.JobObjectAccessRule
+  fullName: System.Security.AccessControl.JobObjectAccessRule
+  nameWithType: JobObjectAccessRule
+- uid: System.Security.AccessControl.JobObjectAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.JobObjectRights,System.Security.AccessControl.AccessControlType)
+  name: JobObjectAccessRule(IdentityReference, JobObjectRights, AccessControlType)
+  href: api/System.Security.AccessControl.JobObjectAccessRule.html#System_Security_AccessControl_JobObjectAccessRule__ctor_System_Security_Principal_IdentityReference_System_Security_AccessControl_JobObjectRights_System_Security_AccessControl_AccessControlType_
+  commentId: M:System.Security.AccessControl.JobObjectAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.JobObjectRights,System.Security.AccessControl.AccessControlType)
+  fullName: System.Security.AccessControl.JobObjectAccessRule.JobObjectAccessRule(System.Security.Principal.IdentityReference, System.Security.AccessControl.JobObjectRights, System.Security.AccessControl.AccessControlType)
+  nameWithType: JobObjectAccessRule.JobObjectAccessRule(IdentityReference, JobObjectRights, AccessControlType)
+- uid: System.Security.AccessControl.JobObjectAccessRule.#ctor(System.String,System.Security.AccessControl.JobObjectRights,System.Security.AccessControl.AccessControlType)
+  name: JobObjectAccessRule(String, JobObjectRights, AccessControlType)
+  href: api/System.Security.AccessControl.JobObjectAccessRule.html#System_Security_AccessControl_JobObjectAccessRule__ctor_System_String_System_Security_AccessControl_JobObjectRights_System_Security_AccessControl_AccessControlType_
+  commentId: M:System.Security.AccessControl.JobObjectAccessRule.#ctor(System.String,System.Security.AccessControl.JobObjectRights,System.Security.AccessControl.AccessControlType)
+  fullName: System.Security.AccessControl.JobObjectAccessRule.JobObjectAccessRule(System.String, System.Security.AccessControl.JobObjectRights, System.Security.AccessControl.AccessControlType)
+  nameWithType: JobObjectAccessRule.JobObjectAccessRule(String, JobObjectRights, AccessControlType)
+- uid: System.Security.AccessControl.JobObjectAccessRule.#ctor*
+  name: JobObjectAccessRule
+  href: api/System.Security.AccessControl.JobObjectAccessRule.html#System_Security_AccessControl_JobObjectAccessRule__ctor_
+  commentId: Overload:System.Security.AccessControl.JobObjectAccessRule.#ctor
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectAccessRule.JobObjectAccessRule
+  nameWithType: JobObjectAccessRule.JobObjectAccessRule
+- uid: System.Security.AccessControl.JobObjectAccessRule.JobObjectRights
+  name: JobObjectRights
+  href: api/System.Security.AccessControl.JobObjectAccessRule.html#System_Security_AccessControl_JobObjectAccessRule_JobObjectRights
+  commentId: P:System.Security.AccessControl.JobObjectAccessRule.JobObjectRights
+  fullName: System.Security.AccessControl.JobObjectAccessRule.JobObjectRights
+  nameWithType: JobObjectAccessRule.JobObjectRights
+- uid: System.Security.AccessControl.JobObjectAccessRule.JobObjectRights*
+  name: JobObjectRights
+  href: api/System.Security.AccessControl.JobObjectAccessRule.html#System_Security_AccessControl_JobObjectAccessRule_JobObjectRights_
+  commentId: Overload:System.Security.AccessControl.JobObjectAccessRule.JobObjectRights
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectAccessRule.JobObjectRights
+  nameWithType: JobObjectAccessRule.JobObjectRights
+- uid: System.Security.AccessControl.JobObjectAuditRule
+  name: JobObjectAuditRule
+  href: api/System.Security.AccessControl.JobObjectAuditRule.html
+  commentId: T:System.Security.AccessControl.JobObjectAuditRule
+  fullName: System.Security.AccessControl.JobObjectAuditRule
+  nameWithType: JobObjectAuditRule
+- uid: System.Security.AccessControl.JobObjectAuditRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.JobObjectRights,System.Security.AccessControl.AuditFlags)
+  name: JobObjectAuditRule(IdentityReference, JobObjectRights, AuditFlags)
+  href: api/System.Security.AccessControl.JobObjectAuditRule.html#System_Security_AccessControl_JobObjectAuditRule__ctor_System_Security_Principal_IdentityReference_System_Security_AccessControl_JobObjectRights_System_Security_AccessControl_AuditFlags_
+  commentId: M:System.Security.AccessControl.JobObjectAuditRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.JobObjectRights,System.Security.AccessControl.AuditFlags)
+  fullName: System.Security.AccessControl.JobObjectAuditRule.JobObjectAuditRule(System.Security.Principal.IdentityReference, System.Security.AccessControl.JobObjectRights, System.Security.AccessControl.AuditFlags)
+  nameWithType: JobObjectAuditRule.JobObjectAuditRule(IdentityReference, JobObjectRights, AuditFlags)
+- uid: System.Security.AccessControl.JobObjectAuditRule.#ctor*
+  name: JobObjectAuditRule
+  href: api/System.Security.AccessControl.JobObjectAuditRule.html#System_Security_AccessControl_JobObjectAuditRule__ctor_
+  commentId: Overload:System.Security.AccessControl.JobObjectAuditRule.#ctor
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectAuditRule.JobObjectAuditRule
+  nameWithType: JobObjectAuditRule.JobObjectAuditRule
+- uid: System.Security.AccessControl.JobObjectAuditRule.JobObjectRights
+  name: JobObjectRights
+  href: api/System.Security.AccessControl.JobObjectAuditRule.html#System_Security_AccessControl_JobObjectAuditRule_JobObjectRights
+  commentId: P:System.Security.AccessControl.JobObjectAuditRule.JobObjectRights
+  fullName: System.Security.AccessControl.JobObjectAuditRule.JobObjectRights
+  nameWithType: JobObjectAuditRule.JobObjectRights
+- uid: System.Security.AccessControl.JobObjectAuditRule.JobObjectRights*
+  name: JobObjectRights
+  href: api/System.Security.AccessControl.JobObjectAuditRule.html#System_Security_AccessControl_JobObjectAuditRule_JobObjectRights_
+  commentId: Overload:System.Security.AccessControl.JobObjectAuditRule.JobObjectRights
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectAuditRule.JobObjectRights
+  nameWithType: JobObjectAuditRule.JobObjectRights
+- uid: System.Security.AccessControl.JobObjectRights
+  name: JobObjectRights
+  href: api/System.Security.AccessControl.JobObjectRights.html
+  commentId: T:System.Security.AccessControl.JobObjectRights
+  fullName: System.Security.AccessControl.JobObjectRights
+  nameWithType: JobObjectRights
+- uid: System.Security.AccessControl.JobObjectRights.AssignProcess
+  name: AssignProcess
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_AssignProcess
+  commentId: F:System.Security.AccessControl.JobObjectRights.AssignProcess
+  fullName: System.Security.AccessControl.JobObjectRights.AssignProcess
+  nameWithType: JobObjectRights.AssignProcess
+- uid: System.Security.AccessControl.JobObjectRights.ChangePermissions
+  name: ChangePermissions
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_ChangePermissions
+  commentId: F:System.Security.AccessControl.JobObjectRights.ChangePermissions
+  fullName: System.Security.AccessControl.JobObjectRights.ChangePermissions
+  nameWithType: JobObjectRights.ChangePermissions
+- uid: System.Security.AccessControl.JobObjectRights.Delete
+  name: Delete
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_Delete
+  commentId: F:System.Security.AccessControl.JobObjectRights.Delete
+  fullName: System.Security.AccessControl.JobObjectRights.Delete
+  nameWithType: JobObjectRights.Delete
+- uid: System.Security.AccessControl.JobObjectRights.FullControl
+  name: FullControl
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_FullControl
+  commentId: F:System.Security.AccessControl.JobObjectRights.FullControl
+  fullName: System.Security.AccessControl.JobObjectRights.FullControl
+  nameWithType: JobObjectRights.FullControl
+- uid: System.Security.AccessControl.JobObjectRights.Query
+  name: Query
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_Query
+  commentId: F:System.Security.AccessControl.JobObjectRights.Query
+  fullName: System.Security.AccessControl.JobObjectRights.Query
+  nameWithType: JobObjectRights.Query
+- uid: System.Security.AccessControl.JobObjectRights.ReadPermissions
+  name: ReadPermissions
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_ReadPermissions
+  commentId: F:System.Security.AccessControl.JobObjectRights.ReadPermissions
+  fullName: System.Security.AccessControl.JobObjectRights.ReadPermissions
+  nameWithType: JobObjectRights.ReadPermissions
+- uid: System.Security.AccessControl.JobObjectRights.SetAttributes
+  name: SetAttributes
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_SetAttributes
+  commentId: F:System.Security.AccessControl.JobObjectRights.SetAttributes
+  fullName: System.Security.AccessControl.JobObjectRights.SetAttributes
+  nameWithType: JobObjectRights.SetAttributes
+- uid: System.Security.AccessControl.JobObjectRights.SetSecurityAttributes
+  name: SetSecurityAttributes
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_SetSecurityAttributes
+  commentId: F:System.Security.AccessControl.JobObjectRights.SetSecurityAttributes
+  fullName: System.Security.AccessControl.JobObjectRights.SetSecurityAttributes
+  nameWithType: JobObjectRights.SetSecurityAttributes
+- uid: System.Security.AccessControl.JobObjectRights.Synchronize
+  name: Synchronize
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_Synchronize
+  commentId: F:System.Security.AccessControl.JobObjectRights.Synchronize
+  fullName: System.Security.AccessControl.JobObjectRights.Synchronize
+  nameWithType: JobObjectRights.Synchronize
+- uid: System.Security.AccessControl.JobObjectRights.TakeOwnership
+  name: TakeOwnership
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_TakeOwnership
+  commentId: F:System.Security.AccessControl.JobObjectRights.TakeOwnership
+  fullName: System.Security.AccessControl.JobObjectRights.TakeOwnership
+  nameWithType: JobObjectRights.TakeOwnership
+- uid: System.Security.AccessControl.JobObjectRights.Terminate
+  name: Terminate
+  href: api/System.Security.AccessControl.JobObjectRights.html#System_Security_AccessControl_JobObjectRights_Terminate
+  commentId: F:System.Security.AccessControl.JobObjectRights.Terminate
+  fullName: System.Security.AccessControl.JobObjectRights.Terminate
+  nameWithType: JobObjectRights.Terminate
+- uid: System.Security.AccessControl.JobObjectSecurity
+  name: JobObjectSecurity
+  href: api/System.Security.AccessControl.JobObjectSecurity.html
+  commentId: T:System.Security.AccessControl.JobObjectSecurity
+  fullName: System.Security.AccessControl.JobObjectSecurity
+  nameWithType: JobObjectSecurity
+- uid: System.Security.AccessControl.JobObjectSecurity.#ctor
+  name: JobObjectSecurity()
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity__ctor
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.#ctor
+  fullName: System.Security.AccessControl.JobObjectSecurity.JobObjectSecurity()
+  nameWithType: JobObjectSecurity.JobObjectSecurity()
+- uid: System.Security.AccessControl.JobObjectSecurity.#ctor(System.String,System.Security.AccessControl.AccessControlSections)
+  name: JobObjectSecurity(String, AccessControlSections)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity__ctor_System_String_System_Security_AccessControl_AccessControlSections_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.#ctor(System.String,System.Security.AccessControl.AccessControlSections)
+  fullName: System.Security.AccessControl.JobObjectSecurity.JobObjectSecurity(System.String, System.Security.AccessControl.AccessControlSections)
+  nameWithType: JobObjectSecurity.JobObjectSecurity(String, AccessControlSections)
+- uid: System.Security.AccessControl.JobObjectSecurity.#ctor*
+  name: JobObjectSecurity
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity__ctor_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.#ctor
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.JobObjectSecurity
+  nameWithType: JobObjectSecurity.JobObjectSecurity
+- uid: System.Security.AccessControl.JobObjectSecurity.AccessRightType
+  name: AccessRightType
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AccessRightType
+  commentId: P:System.Security.AccessControl.JobObjectSecurity.AccessRightType
+  fullName: System.Security.AccessControl.JobObjectSecurity.AccessRightType
+  nameWithType: JobObjectSecurity.AccessRightType
+- uid: System.Security.AccessControl.JobObjectSecurity.AccessRightType*
+  name: AccessRightType
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AccessRightType_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AccessRightType
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AccessRightType
+  nameWithType: JobObjectSecurity.AccessRightType
+- uid: System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)
+  name: AccessRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AccessControlType)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AccessRuleFactory_System_Security_Principal_IdentityReference_System_Int32_System_Boolean_System_Security_AccessControl_InheritanceFlags_System_Security_AccessControl_PropagationFlags_System_Security_AccessControl_AccessControlType_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)
+  fullName: System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference, System.Int32, System.Boolean, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AccessControlType)
+  nameWithType: JobObjectSecurity.AccessRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AccessControlType)
+- uid: System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory*
+  name: AccessRuleFactory
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AccessRuleFactory_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory
+  nameWithType: JobObjectSecurity.AccessRuleFactory
+- uid: System.Security.AccessControl.JobObjectSecurity.AccessRuleType
+  name: AccessRuleType
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AccessRuleType
+  commentId: P:System.Security.AccessControl.JobObjectSecurity.AccessRuleType
+  fullName: System.Security.AccessControl.JobObjectSecurity.AccessRuleType
+  nameWithType: JobObjectSecurity.AccessRuleType
+- uid: System.Security.AccessControl.JobObjectSecurity.AccessRuleType*
+  name: AccessRuleType
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AccessRuleType_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AccessRuleType
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AccessRuleType
+  nameWithType: JobObjectSecurity.AccessRuleType
+- uid: System.Security.AccessControl.JobObjectSecurity.AddAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  name: AddAccessRule(JobObjectAccessRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AddAccessRule_System_Security_AccessControl_JobObjectAccessRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.AddAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.AddAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  nameWithType: JobObjectSecurity.AddAccessRule(JobObjectAccessRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.AddAccessRule*
+  name: AddAccessRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AddAccessRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AddAccessRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AddAccessRule
+  nameWithType: JobObjectSecurity.AddAccessRule
+- uid: System.Security.AccessControl.JobObjectSecurity.AddAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  name: AddAuditRule(JobObjectAuditRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AddAuditRule_System_Security_AccessControl_JobObjectAuditRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.AddAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.AddAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  nameWithType: JobObjectSecurity.AddAuditRule(JobObjectAuditRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.AddAuditRule*
+  name: AddAuditRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AddAuditRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AddAuditRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AddAuditRule
+  nameWithType: JobObjectSecurity.AddAuditRule
+- uid: System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
+  name: AuditRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AuditFlags)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AuditRuleFactory_System_Security_Principal_IdentityReference_System_Int32_System_Boolean_System_Security_AccessControl_InheritanceFlags_System_Security_AccessControl_PropagationFlags_System_Security_AccessControl_AuditFlags_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)
+  fullName: System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference, System.Int32, System.Boolean, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)
+  nameWithType: JobObjectSecurity.AuditRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AuditFlags)
+- uid: System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory*
+  name: AuditRuleFactory
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AuditRuleFactory_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory
+  nameWithType: JobObjectSecurity.AuditRuleFactory
+- uid: System.Security.AccessControl.JobObjectSecurity.AuditRuleType
+  name: AuditRuleType
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AuditRuleType
+  commentId: P:System.Security.AccessControl.JobObjectSecurity.AuditRuleType
+  fullName: System.Security.AccessControl.JobObjectSecurity.AuditRuleType
+  nameWithType: JobObjectSecurity.AuditRuleType
+- uid: System.Security.AccessControl.JobObjectSecurity.AuditRuleType*
+  name: AuditRuleType
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_AuditRuleType_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.AuditRuleType
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.AuditRuleType
+  nameWithType: JobObjectSecurity.AuditRuleType
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  name: RemoveAccessRule(JobObjectAccessRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAccessRule_System_Security_AccessControl_JobObjectAccessRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  nameWithType: JobObjectSecurity.RemoveAccessRule(JobObjectAccessRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule*
+  name: RemoveAccessRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAccessRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule
+  nameWithType: JobObjectSecurity.RemoveAccessRule
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.JobObjectAccessRule)
+  name: RemoveAccessRuleAll(JobObjectAccessRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleAll_System_Security_AccessControl_JobObjectAccessRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.JobObjectAccessRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.JobObjectAccessRule)
+  nameWithType: JobObjectSecurity.RemoveAccessRuleAll(JobObjectAccessRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll*
+  name: RemoveAccessRuleAll
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleAll_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll
+  nameWithType: JobObjectSecurity.RemoveAccessRuleAll
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.JobObjectAccessRule)
+  name: RemoveAccessRuleSpecific(JobObjectAccessRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleSpecific_System_Security_AccessControl_JobObjectAccessRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.JobObjectAccessRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.JobObjectAccessRule)
+  nameWithType: JobObjectSecurity.RemoveAccessRuleSpecific(JobObjectAccessRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific*
+  name: RemoveAccessRuleSpecific
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleSpecific_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific
+  nameWithType: JobObjectSecurity.RemoveAccessRuleSpecific
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  name: RemoveAuditRule(JobObjectAuditRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAuditRule_System_Security_AccessControl_JobObjectAuditRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  nameWithType: JobObjectSecurity.RemoveAuditRule(JobObjectAuditRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule*
+  name: RemoveAuditRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAuditRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule
+  nameWithType: JobObjectSecurity.RemoveAuditRule
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.JobObjectAuditRule)
+  name: RemoveAuditRuleAll(JobObjectAuditRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleAll_System_Security_AccessControl_JobObjectAuditRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.JobObjectAuditRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.JobObjectAuditRule)
+  nameWithType: JobObjectSecurity.RemoveAuditRuleAll(JobObjectAuditRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll*
+  name: RemoveAuditRuleAll
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleAll_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll
+  nameWithType: JobObjectSecurity.RemoveAuditRuleAll
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.JobObjectAuditRule)
+  name: RemoveAuditRuleSpecific(JobObjectAuditRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleSpecific_System_Security_AccessControl_JobObjectAuditRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.JobObjectAuditRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.JobObjectAuditRule)
+  nameWithType: JobObjectSecurity.RemoveAuditRuleSpecific(JobObjectAuditRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific*
+  name: RemoveAuditRuleSpecific
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleSpecific_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific
+  nameWithType: JobObjectSecurity.RemoveAuditRuleSpecific
+- uid: System.Security.AccessControl.JobObjectSecurity.ResetAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  name: ResetAccessRule(JobObjectAccessRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_ResetAccessRule_System_Security_AccessControl_JobObjectAccessRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.ResetAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.ResetAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  nameWithType: JobObjectSecurity.ResetAccessRule(JobObjectAccessRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.ResetAccessRule*
+  name: ResetAccessRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_ResetAccessRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.ResetAccessRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.ResetAccessRule
+  nameWithType: JobObjectSecurity.ResetAccessRule
+- uid: System.Security.AccessControl.JobObjectSecurity.SetAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  name: SetAccessRule(JobObjectAccessRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_SetAccessRule_System_Security_AccessControl_JobObjectAccessRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.SetAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.SetAccessRule(System.Security.AccessControl.JobObjectAccessRule)
+  nameWithType: JobObjectSecurity.SetAccessRule(JobObjectAccessRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.SetAccessRule*
+  name: SetAccessRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_SetAccessRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.SetAccessRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.SetAccessRule
+  nameWithType: JobObjectSecurity.SetAccessRule
+- uid: System.Security.AccessControl.JobObjectSecurity.SetAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  name: SetAuditRule(JobObjectAuditRule)
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_SetAuditRule_System_Security_AccessControl_JobObjectAuditRule_
+  commentId: M:System.Security.AccessControl.JobObjectSecurity.SetAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  fullName: System.Security.AccessControl.JobObjectSecurity.SetAuditRule(System.Security.AccessControl.JobObjectAuditRule)
+  nameWithType: JobObjectSecurity.SetAuditRule(JobObjectAuditRule)
+- uid: System.Security.AccessControl.JobObjectSecurity.SetAuditRule*
+  name: SetAuditRule
+  href: api/System.Security.AccessControl.JobObjectSecurity.html#System_Security_AccessControl_JobObjectSecurity_SetAuditRule_
+  commentId: Overload:System.Security.AccessControl.JobObjectSecurity.SetAuditRule
+  isSpec: "True"
+  fullName: System.Security.AccessControl.JobObjectSecurity.SetAuditRule
+  nameWithType: JobObjectSecurity.SetAuditRule

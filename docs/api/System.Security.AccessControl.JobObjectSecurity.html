@@ -1,0 +1,1046 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class JobObjectSecurity
+   | Fs.Processes Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class JobObjectSecurity
+   | Fs.Processes Documentation ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/Fs.Process.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="System.Security.AccessControl.JobObjectSecurity">
+  
+  
+  <h1 id="System_Security_AccessControl_JobObjectSecurity" data-uid="System.Security.AccessControl.JobObjectSecurity" class="text-break">Class JobObjectSecurity
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the Windows Access Control for a named <a class="xref" href="Fs.Processes.JobObjects.JobObject.html">JobObject</a>. This class
+is not available in netstandard 2.0.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.Security.AccessControl.ObjectSecurity</span></div>
+    <div class="level2"><span class="xref">System.Security.AccessControl.CommonObjectSecurity</span></div>
+    <div class="level3"><span class="xref">System.Security.AccessControl.NativeObjectSecurity</span></div>
+    <div class="level4"><span class="xref">JobObjectSecurity</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Security.AccessControl.NativeObjectSecurity.Persist(System.String, System.Security.AccessControl.AccessControlSections)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.NativeObjectSecurity.Persist(System.String, System.Security.AccessControl.AccessControlSections, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.NativeObjectSecurity.Persist(System.Runtime.InteropServices.SafeHandle, System.Security.AccessControl.AccessControlSections)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.NativeObjectSecurity.Persist(System.Runtime.InteropServices.SafeHandle, System.Security.AccessControl.AccessControlSections, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.ModifyAccess(System.Security.AccessControl.AccessControlModification, System.Security.AccessControl.AccessRule, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.ModifyAudit(System.Security.AccessControl.AccessControlModification, System.Security.AccessControl.AuditRule, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.AddAccessRule(System.Security.AccessControl.AccessRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.SetAccessRule(System.Security.AccessControl.AccessRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.ResetAccessRule(System.Security.AccessControl.AccessRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.RemoveAccessRule(System.Security.AccessControl.AccessRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.AccessRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.AccessRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.AddAuditRule(System.Security.AccessControl.AuditRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.SetAuditRule(System.Security.AccessControl.AuditRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.RemoveAuditRule(System.Security.AccessControl.AuditRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.AuditRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.AuditRule)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.GetAccessRules(System.Boolean, System.Boolean, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.CommonObjectSecurity.GetAuditRules(System.Boolean, System.Boolean, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.ReadLock()</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.ReadUnlock()</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.WriteLock()</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.WriteUnlock()</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.Persist(System.Boolean, System.String, System.Security.AccessControl.AccessControlSections)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.GetOwner(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetOwner(System.Security.Principal.IdentityReference)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.GetGroup(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetGroup(System.Security.Principal.IdentityReference)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.PurgeAccessRules(System.Security.Principal.IdentityReference)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.PurgeAuditRules(System.Security.Principal.IdentityReference)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetAccessRuleProtection(System.Boolean, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetAuditRuleProtection(System.Boolean, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.IsSddlConversionSupported()</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm(System.Security.AccessControl.AccessControlSections)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm(System.String, System.Security.AccessControl.AccessControlSections)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorBinaryForm()</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorBinaryForm(System.Byte[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorBinaryForm(System.Byte[], System.Security.AccessControl.AccessControlSections)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.ModifyAccessRule(System.Security.AccessControl.AccessControlModification, System.Security.AccessControl.AccessRule, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.ModifyAuditRule(System.Security.AccessControl.AccessControlModification, System.Security.AccessControl.AuditRule, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.OwnerModified</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.GroupModified</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.AuditRulesModified</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.AccessRulesModified</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.IsContainer</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.IsDS</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.AreAccessRulesProtected</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.AreAuditRulesProtected</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.AreAccessRulesCanonical</span>
+    </div>
+    <div>
+      <span class="xref">System.Security.AccessControl.ObjectSecurity.AreAuditRulesCanonical</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="System.Security.AccessControl.html">System.Security.AccessControl</a></h6>
+  <h6><strong>Assembly</strong>: Fs.Processes.dll</h6>
+  <h5 id="System_Security_AccessControl_JobObjectSecurity_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class JobObjectSecurity : NativeObjectSecurity</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity__ctor.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L22">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity__ctor_" data-uid="System.Security.AccessControl.JobObjectSecurity.#ctor*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity__ctor" data-uid="System.Security.AccessControl.JobObjectSecurity.#ctor">JobObjectSecurity()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="System.Security.AccessControl.JobObjectSecurity.html">JobObjectSecurity</a> with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobObjectSecurity()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity__ctor_System_String_System_Security_AccessControl_AccessControlSections_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.%23ctor(System.String%2CSystem.Security.AccessControl.AccessControlSections)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L33">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity__ctor_" data-uid="System.Security.AccessControl.JobObjectSecurity.#ctor*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity__ctor_System_String_System_Security_AccessControl_AccessControlSections_" data-uid="System.Security.AccessControl.JobObjectSecurity.#ctor(System.String,System.Security.AccessControl.AccessControlSections)">JobObjectSecurity(String, AccessControlSections)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="System.Security.AccessControl.JobObjectSecurity.html">JobObjectSecurity</a> with the specified sections of the access
+control security rules from the JobObject with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobObjectSecurity(string name, AccessControlSections includeSections)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.AccessControlSections</span></td>
+        <td><span class="parametername">includeSections</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AccessRightType.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AccessRightType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L148">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AccessRightType_" data-uid="System.Security.AccessControl.JobObjectSecurity.AccessRightType*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AccessRightType" data-uid="System.Security.AccessControl.JobObjectSecurity.AccessRightType">AccessRightType</h4>
+  <div class="markdown level1 summary"><p>Gets the enumeration that the <a class="xref" href="System.Security.AccessControl.JobObjectSecurity.html">JobObjectSecurity</a> class uses to represent access rights.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type AccessRightType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Security.AccessControl.ObjectSecurity.AccessRightType</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AccessRuleType.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AccessRuleType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L153">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AccessRuleType_" data-uid="System.Security.AccessControl.JobObjectSecurity.AccessRuleType*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AccessRuleType" data-uid="System.Security.AccessControl.JobObjectSecurity.AccessRuleType">AccessRuleType</h4>
+  <div class="markdown level1 summary"><p>Gets the type that the <a class="xref" href="System.Security.AccessControl.JobObjectSecurity.html">JobObjectSecurity</a> class uses to represent access rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type AccessRuleType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Security.AccessControl.ObjectSecurity.AccessRuleType</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AuditRuleType.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AuditRuleType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L158">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AuditRuleType_" data-uid="System.Security.AccessControl.JobObjectSecurity.AuditRuleType*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AuditRuleType" data-uid="System.Security.AccessControl.JobObjectSecurity.AuditRuleType">AuditRuleType</h4>
+  <div class="markdown level1 summary"><p>Gets the type that the <a class="xref" href="System.Security.AccessControl.JobObjectSecurity.html">JobObjectSecurity</a> class uses to represent audit rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type AuditRuleType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Security.AccessControl.ObjectSecurity.AuditRuleType</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AccessRuleFactory_System_Security_Principal_IdentityReference_System_Int32_System_Boolean_System_Security_AccessControl_InheritanceFlags_System_Security_AccessControl_PropagationFlags_System_Security_AccessControl_AccessControlType_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference%2CSystem.Int32%2CSystem.Boolean%2CSystem.Security.AccessControl.InheritanceFlags%2CSystem.Security.AccessControl.PropagationFlags%2CSystem.Security.AccessControl.AccessControlType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L54">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AccessRuleFactory_" data-uid="System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AccessRuleFactory_System_Security_Principal_IdentityReference_System_Int32_System_Boolean_System_Security_AccessControl_InheritanceFlags_System_Security_AccessControl_PropagationFlags_System_Security_AccessControl_AccessControlType_" data-uid="System.Security.AccessControl.JobObjectSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)">AccessRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AccessControlType)</h4>
+  <div class="markdown level1 summary"><p>Creates a new access control rule for the specified user, with the specified access rights, access control, and flags. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, bool isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Security.Principal.IdentityReference</span></td>
+        <td><span class="parametername">identityReference</span></td>
+        <td><p>An IdentityReference that identifies the user or group the rule applies to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">accessMask</span></td>
+        <td><p>A bitwise combination of <a class="xref" href="System.Security.AccessControl.JobObjectRights.html">JobObjectRights</a> values specifying the access rights to audit, cast to an integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isInherited</span></td>
+        <td><p>Meaningless for named JobObject handles, because they have no hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.InheritanceFlags</span></td>
+        <td><span class="parametername">inheritanceFlags</span></td>
+        <td><p>Meaningless for named JobObject handles, because they have no hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.PropagationFlags</span></td>
+        <td><span class="parametername">propagationFlags</span></td>
+        <td><p>Meaningless for named JobObject handles, because they have no hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.AccessControlType</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>One of the AccessControlType values specifying whether the rights are allowed or denied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.AccessRule</span></td>
+        <td><p>A <a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a> object representing the specified access rule for the specified user. The return type of the method is the base
+class, AccessRule, but the value can be cast safely to the derived class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Security.AccessControl.ObjectSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference, System.Int32, System.Boolean, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AccessControlType)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AddAccessRule_System_Security_AccessControl_JobObjectAccessRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AddAccessRule(System.Security.AccessControl.JobObjectAccessRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L79">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AddAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.AddAccessRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AddAccessRule_System_Security_AccessControl_JobObjectAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.AddAccessRule(System.Security.AccessControl.JobObjectAccessRule)">AddAccessRule(JobObjectAccessRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for a matching access control rule with which the new rule can be merged. If none are found, adds the new rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddAccessRule(JobObjectAccessRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The access control rule to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AddAuditRule_System_Security_AccessControl_JobObjectAuditRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AddAuditRule(System.Security.AccessControl.JobObjectAuditRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L117">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AddAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.AddAuditRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AddAuditRule_System_Security_AccessControl_JobObjectAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.AddAuditRule(System.Security.AccessControl.JobObjectAuditRule)">AddAuditRule(JobObjectAuditRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for a matching audit control rule with which the new rule can be merged. If none are found, adds the new rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddAuditRule(JobObjectAuditRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAuditRule.html">JobObjectAuditRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The Audit control rule to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_AuditRuleFactory_System_Security_Principal_IdentityReference_System_Int32_System_Boolean_System_Security_AccessControl_InheritanceFlags_System_Security_AccessControl_PropagationFlags_System_Security_AccessControl_AuditFlags_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference%2CSystem.Int32%2CSystem.Boolean%2CSystem.Security.AccessControl.InheritanceFlags%2CSystem.Security.AccessControl.PropagationFlags%2CSystem.Security.AccessControl.AuditFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L70">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_AuditRuleFactory_" data-uid="System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_AuditRuleFactory_System_Security_Principal_IdentityReference_System_Int32_System_Boolean_System_Security_AccessControl_InheritanceFlags_System_Security_AccessControl_PropagationFlags_System_Security_AccessControl_AuditFlags_" data-uid="System.Security.AccessControl.JobObjectSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)">AuditRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AuditFlags)</h4>
+  <div class="markdown level1 summary"><p>Creates a new audit rule, specifying the user the rule applies to, the access rights to audit, and the outcome that triggers the audit rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, bool isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Security.Principal.IdentityReference</span></td>
+        <td><span class="parametername">identityReference</span></td>
+        <td><p>An IdentityReference that identifies the user or group the rule applies to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">accessMask</span></td>
+        <td><p>A bitwise combination of <a class="xref" href="System.Security.AccessControl.JobObjectRights.html">JobObjectRights</a> values specifying the access rights to audit, cast to an integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isInherited</span></td>
+        <td><p>Meaningless for named JobObject handles, because they have no hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.InheritanceFlags</span></td>
+        <td><span class="parametername">inheritanceFlags</span></td>
+        <td><p>Meaningless for named JobObject handles, because they have no hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.PropagationFlags</span></td>
+        <td><span class="parametername">propagationFlags</span></td>
+        <td><p>Meaningless for named JobObject handles, because they have no hierarchy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.AuditFlags</span></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>A bitwise combination of AuditFlags values that specify whether to audit successful access, failed access, or both.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Security.AccessControl.AuditRule</span></td>
+        <td><p>A <a class="xref" href="System.Security.AccessControl.JobObjectAuditRule.html">JobObjectAuditRule</a> object representing the specified audit rule for the specified user. The return type of the method is the base
+class, AuditRule, but the value can be cast safely to the derived class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Security.AccessControl.ObjectSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference, System.Int32, System.Boolean, System.Security.AccessControl.InheritanceFlags, System.Security.AccessControl.PropagationFlags, System.Security.AccessControl.AuditFlags)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_RemoveAccessRule_System_Security_AccessControl_JobObjectAccessRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule(System.Security.AccessControl.JobObjectAccessRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L99">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_RemoveAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_RemoveAccessRule_System_Security_AccessControl_JobObjectAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAccessRule(System.Security.AccessControl.JobObjectAccessRule)">RemoveAccessRule(JobObjectAccessRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for an access control rule with the same user and AccessControlType (allow or deny) as the specified rule, 
+and with compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified access rule are removed from it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveAccessRule(JobObjectAccessRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The access control rule to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a compatible rule is found; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleAll_System_Security_AccessControl_JobObjectAccessRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.JobObjectAccessRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L105">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleAll_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleAll_System_Security_AccessControl_JobObjectAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.JobObjectAccessRule)">RemoveAccessRuleAll(JobObjectAccessRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for all access control rules with the same user and AccessControlType (allow or deny) as the specified rule and, if found, removes them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAccessRuleAll(JobObjectAccessRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The access control rule to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleSpecific_System_Security_AccessControl_JobObjectAccessRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.JobObjectAccessRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L111">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleSpecific_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_RemoveAccessRuleSpecific_System_Security_AccessControl_JobObjectAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.JobObjectAccessRule)">RemoveAccessRuleSpecific(JobObjectAccessRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for an access control rule that exactly matches the specified rule and, if found, removes it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAccessRuleSpecific(JobObjectAccessRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The access control rule to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_RemoveAuditRule_System_Security_AccessControl_JobObjectAuditRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule(System.Security.AccessControl.JobObjectAuditRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L131">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_RemoveAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_RemoveAuditRule_System_Security_AccessControl_JobObjectAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAuditRule(System.Security.AccessControl.JobObjectAuditRule)">RemoveAuditRule(JobObjectAuditRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for an audit control rule with the same user and AuditControlType (allow or deny) as the specified rule, 
+and with compatible inheritance and propagation flags; if such a rule is found, the rights contained in the specified Audit rule are removed from it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveAuditRule(JobObjectAuditRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAuditRule.html">JobObjectAuditRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The Audit control rule to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if a compatible rule is found; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleAll_System_Security_AccessControl_JobObjectAuditRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.JobObjectAuditRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L137">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleAll_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleAll_System_Security_AccessControl_JobObjectAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.JobObjectAuditRule)">RemoveAuditRuleAll(JobObjectAuditRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for all audit control rules with the same user and AuditControlType (allow or deny) as the specified rule and, if found, removes them.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAuditRuleAll(JobObjectAuditRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAuditRule.html">JobObjectAuditRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The Audit control rule to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleSpecific_System_Security_AccessControl_JobObjectAuditRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.JobObjectAuditRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L143">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleSpecific_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_RemoveAuditRuleSpecific_System_Security_AccessControl_JobObjectAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.JobObjectAuditRule)">RemoveAuditRuleSpecific(JobObjectAuditRule)</h4>
+  <div class="markdown level1 summary"><p>Searches for an audit control rule that exactly matches the specified rule and, if found, removes it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAuditRuleSpecific(JobObjectAuditRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAuditRule.html">JobObjectAuditRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The Audit control rule to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_ResetAccessRule_System_Security_AccessControl_JobObjectAccessRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.ResetAccessRule(System.Security.AccessControl.JobObjectAccessRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L91">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_ResetAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.ResetAccessRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_ResetAccessRule_System_Security_AccessControl_JobObjectAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.ResetAccessRule(System.Security.AccessControl.JobObjectAccessRule)">ResetAccessRule(JobObjectAccessRule)</h4>
+  <div class="markdown level1 summary"><p>Removes all access control rules with the same user as the specified rule, regardless of AccessControlType, and then adds the specified rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetAccessRule(JobObjectAccessRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The access control rule to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_SetAccessRule_System_Security_AccessControl_JobObjectAccessRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.SetAccessRule(System.Security.AccessControl.JobObjectAccessRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L85">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_SetAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.SetAccessRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_SetAccessRule_System_Security_AccessControl_JobObjectAccessRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.SetAccessRule(System.Security.AccessControl.JobObjectAccessRule)">SetAccessRule(JobObjectAccessRule)</h4>
+  <div class="markdown level1 summary"><p>Removes all access control rules with the same user and AccessControlType (allow or deny) as the specified rule, and then adds the specified rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAccessRule(JobObjectAccessRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAccessRule.html">JobObjectAccessRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The access control rule to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity_SetAuditRule_System_Security_AccessControl_JobObjectAuditRule_.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity.SetAuditRule(System.Security.AccessControl.JobObjectAuditRule)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L123">View Source</a>
+  </span>
+  <a id="System_Security_AccessControl_JobObjectSecurity_SetAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.SetAuditRule*"></a>
+  <h4 id="System_Security_AccessControl_JobObjectSecurity_SetAuditRule_System_Security_AccessControl_JobObjectAuditRule_" data-uid="System.Security.AccessControl.JobObjectSecurity.SetAuditRule(System.Security.AccessControl.JobObjectAuditRule)">SetAuditRule(JobObjectAuditRule)</h4>
+  <div class="markdown level1 summary"><p>Removes all audit control rules with the same user and AuditControlType (allow or deny) as the specified rule, and then adds the specified rule.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAuditRule(JobObjectAuditRule rule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.Security.AccessControl.JobObjectAuditRule.html">JobObjectAuditRule</a></td>
+        <td><span class="parametername">rule</span></td>
+        <td><p>The Audit control rule to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/williamb1024/fs-processes/new/master/apiSpec/new?filename=System_Security_AccessControl_JobObjectSecurity.md&amp;value=---%0Auid%3A%20System.Security.AccessControl.JobObjectSecurity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/williamb1024/fs-processes/blob/master/Source/Fs.Processes/System.Security.AccessControl/JobObjectSecurity.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
