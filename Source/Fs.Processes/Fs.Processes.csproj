@@ -12,7 +12,7 @@
     <Authors>williamb</Authors>
     <Copyright>Copyright William Brooks</Copyright>
     <PackageLicenseUrl>https://github.com/williamb1024/fs-processes/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageIconUrl>https://github.com/williamb1024/fs-processes/blob/master/fs.process.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/williamb1024/fs-processes/blob/master/fs.process.png?raw=true</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
