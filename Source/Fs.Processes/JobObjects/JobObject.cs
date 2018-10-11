@@ -54,61 +54,6 @@ namespace Fs.Processes.JobObjects
             }
         }
 
-#if NET46 || NET47
-        //public JobObject ( string name, out bool createdNew, JobObjectSecurity jobObjectSecurity )
-        //{
-        //    if (name == null)
-        //        throw new ArgumentNullException(nameof(name));
-
-        //    if (name.Length == 0)
-        //        throw new ArgumentException(Resources.NameCannotBeEmpty, nameof(name));
-
-        //    try
-        //    {
-        //        _completionPort = JobObjectCompletionPort.GetCompletionPort();
-
-        //        GCHandle securityDescriptorHandle = default;
-        //        try
-        //        {
-        //            Interop.Kernel32.SECURITY_ATTRIBUTES securityAttributes = new Interop.Kernel32.SECURITY_ATTRIBUTES();
-        //            securityAttributes.nLength = Interop.Kernel32.SECURITY_ATTRIBUTES.SizeOf;
-
-        //            if (jobObjectSecurity != null)
-        //            {
-        //                securityDescriptorHandle = GCHandle.Alloc(jobObjectSecurity.GetSecurityDescriptorBinaryForm(), GCHandleType.Pinned);
-        //                securityAttributes.lpSecurityDescriptor = securityDescriptorHandle.AddrOfPinnedObject();
-        //            }
-
-        //            _handle = Interop.Kernel32.CreateJobObject(ref securityAttributes, name);
-        //            if ((_handle == null) || (_handle.IsInvalid))
-        //            {
-        //                int errorCode = Marshal.GetLastWin32Error();
-        //                if (errorCode == Interop.Errors.ERROR_INVALID_HANDLE)
-        //                    throw new JobObjectCannotBeOpenedException(String.Format(Resources.JobObjectCannotBeOpened_InvalidHandle, name));
-
-        //                throw Errors.Win32Error(errorCode);
-        //            }
-
-        //            // TODO: can we assign a completion port to the handle willy-nilly or does it replace an existing port????
-
-        //            createdNew = Marshal.GetLastWin32Error() != Interop.Errors.ERROR_ALREADY_EXISTS;
-
-        //            AssociateWithPort();
-
-        //        }
-        //        finally
-        //        {
-        //            if (securityDescriptorHandle.IsAllocated)
-        //                securityDescriptorHandle.Free();
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        Dispose();
-        //        throw;
-        //    }
-        //}
-#endif
         private void Dispose ( bool disposing )
         {
             // remove completion handler before disposing handle, this should prevent a possible race with
@@ -328,12 +273,31 @@ namespace Fs.Processes.JobObjects
                     throw Errors.Win32Error();
 
                 // CPU limits are supported if limit violations are supported...
-                if ((_jobsLimitViolationSupported) &&
-                    (!Interop.Kernel32.SetInformationJobObject(_handle,
-                                                               Interop.Kernel32.JobObjectInformationClass.CpuRateControlInformation,
-                                                               ref cpuLimits,
-                                                               Interop.Kernel32.JOBOBJECT_CPU_RATE_CONTROL_INFORMATION.SizeOf)))
-                    throw Errors.Win32Error();
+                if (_jobsLimitViolationSupported)
+                {
+                    // attempting to remove CPU limits if no limits are currently set results in an ERROR_INVALID_PARAMETER
+                    // error .. so we're going to read the current CPU limits before continuing..
+
+                    if (!Interop.Kernel32.QueryInformationJobObject(_handle,
+                                                                    Interop.Kernel32.JobObjectInformationClass.CpuRateControlInformation,
+                                                                    out Interop.Kernel32.JOBOBJECT_CPU_RATE_CONTROL_INFORMATION currentCpuLimits,
+                                                                    Interop.Kernel32.JOBOBJECT_CPU_RATE_CONTROL_INFORMATION.SizeOf,
+                                                                    IntPtr.Zero))
+                        throw Errors.Win32Error();
+
+                    // if there are current CPU limits, then any incoming cpuLimits are acceptable. If there are no current
+                    // CPU limits, then we only attempt to set the limits if the incoming value specifies a limit.
+
+                    if ((currentCpuLimits.ControlFlags != 0) ||
+                        (cpuLimits.ControlFlags != 0))
+                    {
+                        if (!Interop.Kernel32.SetInformationJobObject(_handle,
+                                                                   Interop.Kernel32.JobObjectInformationClass.CpuRateControlInformation,
+                                                                   ref cpuLimits,
+                                                                   Interop.Kernel32.JOBOBJECT_CPU_RATE_CONTROL_INFORMATION.SizeOf))
+                            throw Errors.Win32Error();
+                    }
+                }
             }
             finally
             {
