@@ -13,6 +13,9 @@
     <Copyright>Copyright William Brooks</Copyright>
     <PackageLicenseUrl>https://github.com/williamb1024/fs-processes/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageIconUrl>https://github.com/williamb1024/fs-processes/blob/master/fs.process.png?raw=true</PackageIconUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SigningKey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

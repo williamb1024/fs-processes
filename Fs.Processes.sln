@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fs.Processes", "Source\Fs.Processes\Fs.Processes.csproj", "{7DBBBA76-65E2-45AB-B43B-6AA9CBD05622}"
 EndProject
@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{024ED2
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		SigningKey.snk = SigningKey.snk
 		version.json = version.json
 	EndProjectSection
 EndProject
