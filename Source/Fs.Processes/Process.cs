@@ -908,9 +908,9 @@ namespace Fs.Processes
             executableFileName = executableFileName.Trim();
             var isQuoted = (executableFileName.StartsWith("\"", StringComparison.Ordinal) && executableFileName.EndsWith("\"", StringComparison.Ordinal));
 
-            if (isQuoted) commandLine.Append('"');
+            if (!isQuoted) commandLine.Append('"');
             commandLine.Append(executableFileName);
-            if (isQuoted) commandLine.Append('"');
+            if (!isQuoted) commandLine.Append('"');
 
             if (argumentsList != null)
             {
