@@ -209,6 +209,10 @@ internal partial class Interop
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true, BestFitMapping = false, EntryPoint = "CreateJobObjectW")]
         internal static extern SafeJobObjectHandle CreateJobObject ( ref SECURITY_ATTRIBUTES lpJobAttributes, string lpName );
 
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true, BestFitMapping = false, EntryPoint = "OpenJobObjectW")]
+        internal static extern SafeJobObjectHandle OpenJobObject(uint dwDesiredAccess, BOOL bInheritHandle, string lpName);
+
+
         [DllImport("kernel32.dll", SetLastError = true, EntryPoint = "PostQueuedCompletionStatus")]
         internal static extern bool PostQueuedCompletionStatus (
             SafeIoCompletionPortHandle CompletionPort,
