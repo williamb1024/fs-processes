@@ -23,12 +23,31 @@ namespace Fs.Processes.JobObjects
         private readonly JobObjectCompletionPort _completionPort;
         private TaskCompletionSource<int> _idleTaskCompletionSource;
 
+        private JobObject(SafeJobObjectHandle handle)
+        {
+            try
+            {
+                // get the completion port reference..
+                _completionPort = JobObjectCompletionPort.GetCompletionPort();
+                _handle = handle;
+
+                // join the handle to the completion port..
+                AssociateWithPort();
+            }
+            catch
+            {
+                Dispose();
+                throw;
+            }
+        }
+
         /// <summary>
-        /// Creates a new <see cref="JobObject"/> instance.
+        /// Creates a new named <see cref="JobObject"/> instance.
         /// </summary>
+        /// <param name="Name">The name of the <see cref="JobObject"/></param>
         /// <param name="Limits">The <see cref="JobLimits"/> to apply to the new <see cref="JobObject"/>.</param>
         /// <param name="Notifications">The <see cref="JobNotifications"/> to apply to the new <see cref="JobObject"/>.</param>
-        public JobObject ( JobLimits? Limits = null, JobNotifications? Notifications = null )
+        public JobObject(string? Name, JobLimits? Limits = null, JobNotifications? Notifications = null)
         {
             try
             {
@@ -36,7 +55,7 @@ namespace Fs.Processes.JobObjects
                 _completionPort = JobObjectCompletionPort.GetCompletionPort();
 
                 // create the handle..
-                _handle = Interop.Kernel32.CreateJobObject(IntPtr.Zero, null);
+                _handle = Interop.Kernel32.CreateJobObject(IntPtr.Zero, Name);
                 if ((_handle == null) || (_handle.IsInvalid))
                     throw Errors.Win32Error();
 
@@ -52,6 +71,26 @@ namespace Fs.Processes.JobObjects
                 Dispose();
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Creates a new unnamed <see cref="JobObject"/> instance.
+        /// </summary>
+        /// <param name="Limits">The <see cref="JobLimits"/> to apply to the new <see cref="JobObject"/>.</param>
+        /// <param name="Notifications">The <see cref="JobNotifications"/> to apply to the new <see cref="JobObject"/>.</param>
+        public JobObject(JobLimits? Limits = null, JobNotifications? Notifications = null) : this(null, Limits, Notifications)
+        {
+        }
+
+        /// <summary>
+        /// Opens an existing Job Object by name, creating a <see cref="JobObject"/> instance.
+        /// </summary>
+        /// <param name="Name">The name of the <see cref="JobObject"/> as specified during creation</param>
+        public static JobObject Open(string Name)
+        {
+            SafeJobObjectHandle handle = Interop.Kernel32.OpenJobObject(0, Interop.BOOL.TRUE, Name);
+
+            return new JobObject(handle);
         }
 
         private void Dispose ( bool disposing )
