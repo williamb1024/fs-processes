@@ -47,7 +47,7 @@ namespace Fs.Processes.JobObjects
         /// <param name="Name">The name of the <see cref="JobObject"/></param>
         /// <param name="Limits">The <see cref="JobLimits"/> to apply to the new <see cref="JobObject"/>.</param>
         /// <param name="Notifications">The <see cref="JobNotifications"/> to apply to the new <see cref="JobObject"/>.</param>
-        public JobObject(string? Name, JobLimits? Limits = null, JobNotifications? Notifications = null)
+        public JobObject(string Name, JobLimits? Limits = null, JobNotifications? Notifications = null)
         {
             try
             {
