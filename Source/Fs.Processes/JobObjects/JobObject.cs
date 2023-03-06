@@ -108,7 +108,7 @@ namespace Fs.Processes.JobObjects
             lock (_idleTaskLock)
             {
                 _handle?.Dispose();
-                CompleteIdleTask(false);
+                CompleteIdleTask(true);
             }
 
             _completionPort?.Dispose();
@@ -415,7 +415,7 @@ namespace Fs.Processes.JobObjects
                 {
                     // if the number of active processes dropped to zero, complete the Idle task..
                     if (notifyMessage == Interop.Kernel32.JobObjectMessage.ActiveProcessZero)
-                        CompleteIdleTask(true);
+                        CompleteIdleTask(false);
 
                     // queue the notification to the thread pool..
                     if (HasEventHandler(notifyMessage))
