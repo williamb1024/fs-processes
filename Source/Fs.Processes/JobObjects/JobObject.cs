@@ -108,7 +108,7 @@ namespace Fs.Processes.JobObjects
             lock (_idleTaskLock)
             {
                 _handle?.Dispose();
-                CompleteIdleTask(true);
+                CompleteIdleTask(false);
             }
 
             _completionPort?.Dispose();
